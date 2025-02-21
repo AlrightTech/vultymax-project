@@ -1,0 +1,2 @@
+[14-Feb-2025 05:37:48 UTC] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.3.0". You are running 8.2.27. in /home/apnapindi/vultymax.apnapindionline.com/core/vendor/composer/platform_check.php on line 22
+[14-Feb-2025 05:38:29 UTC] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.3.0". You are running 8.2.27. in /home/apnapindi/vultymax.apnapindionline.com/core/vendor/composer/platform_check.php on line 22
