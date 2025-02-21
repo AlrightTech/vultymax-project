@@ -1,22 +1,29 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@200;300;400;500;600;700&display=swap");
 
 :root {
-	color: rgb(170, 169, 169);
+	color: rgba(253, 89, 73, 1);
 	--heading-font: "Rubik", sans-serif;
 	--body-font: "Rubik", sans-serif;
 	--heading: 58 69 89;
 	--body: 107 115 132;
 	--border: 228 16% 94%;
 	--base: 31 171 137;
-	--accent-h: 205;
-	--accent-s: 100%;
-	--accent-l: 14%;
+	/* --accent-h: 253;
+	--accent-s: 89%;
+	--accent-l:73%;
+	--accent: var(--accent-h) var(--accent-s) var(--accent-l); */
+	 --accent-h: 6;
+    --accent-s: 98%;
+    --accent-l: 64%;
+    --accent-hsl: var(--accent-h) var(--accent-s) var(--accent-l);
+    --accent-rgb: 253, 89, 73;
+    --accent: hsl(var(--accent-hsl)); /* HSL format */
+    --accent-rgba: rgba(var(--accent-rgb), 1); /* RGBA format */
 	--accent-50: var(--accent-h) var(--accent-s) calc(var(--accent-l) + 25%);
 	--accent-100: var(--accent-h) var(--accent-s) calc(var(--accent-l) + 20%);
 	--accent-200: var(--accent-h) var(--accent-s) calc(var(--accent-l) + 15%);
 	--accent-300: var(--accent-h) var(--accent-s) calc(var(--accent-l) + 10%);
 	--accent-400: var(--accent-h) var(--accent-s) calc(var(--accent-l) + 5%);
-	--accent: var(--accent-h) var(--accent-s) var(--accent-l);
 	--accent-600: var(--accent-h) var(--accent-s) calc(var(--accent-l) - 5%);
 	--accent-700: var(--accent-h) var(--accent-s) calc(var(--accent-l) - 10%);
 	--accent-800: var(--accent-h) var(--accent-s) calc(var(--accent-l) - 15%);
@@ -167,7 +174,7 @@ a {
 }
 
 .bg--accent {
-	background-color: hsl(var(--accent)) !important;
+	background-color: hsl(var(--accent-hsl)) !important;
 }
 
 .bg--base {
@@ -1699,6 +1706,8 @@ input:-webkit-autofill {
 	width: 100%;
 	top: 0;
 	z-index: 111;
+	background-color: hsl(var(--white));
+	box-shadow: 0 3px 12px hsl(var(--dark) / 0.08);
 }
 
 .header.dash-header {
@@ -1828,7 +1837,7 @@ input:-webkit-autofill {
 	font-size: 15px;
 	font-weight: 400;
 	position: relative;
-	color: hsl(var(--white));
+	color: rgb(var(--body));
 }
 
 .header.dash-header .menu li a {
@@ -2075,7 +2084,8 @@ input:-webkit-autofill {
 .banner-section {
 	padding: calc(180px + 80px) 0 0;
 	position: relative;
-	background-color: hsl(var(--accent));
+	background-color: hsl(var(--accent-hsl));
+
 }
 
 .overlay--dark {
@@ -2089,7 +2099,7 @@ input:-webkit-autofill {
 	height: 100%;
 	left: 0;
 	top: 0;
-	background-color: hsl(var(--accent));
+	background-color: hsl(var(--accent-hsl));
 }
 
 .overlay--dark .container {
@@ -3161,7 +3171,7 @@ div[class*="col"]:not(:last-child) .social-item {
 }
 
 .deposit-card .card-header {
-	background: hsl(var(--accent));
+	background: hsl(var(--accent-hsl));
 }
 
 .deposit-card .card-header .card-title {
@@ -3439,7 +3449,7 @@ div[class*="col"]:not(:last-child) .social-item {
 
 .outgoing__msg .post__creator-content p {
 	border-radius: 15px 15px 0 15px !important;
-	background: hsl(var(--accent)) !important;
+	background: hsl(var(--accent-hsl)) !important;
 	color: hsl(var(--white));
 }
 

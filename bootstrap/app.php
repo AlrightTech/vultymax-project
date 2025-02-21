@@ -22,7 +22,9 @@ return Application::configure(basePath: dirname(__DIR__))
         channels: __DIR__.'/../routes/channels.php',
         health: '/up',
         using:function(){
-            Route::namespace('App\Http\Controllers')->middleware([VugiChugi::mdNm()])->group(function(){
+            Route::namespace('App\Http\Controllers')
+            // ->middleware([VugiChugi::mdNm()])
+            ->group(function(){
                 Route::prefix('api')
                     ->middleware(['api','maintenance'])
                     ->group(base_path('routes/api.php'));
