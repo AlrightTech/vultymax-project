@@ -11,7 +11,7 @@ $banner = getContent('banner.content', true);
                     <div class="form--group">
                         <div class="icon"><i class="fas fa-search"></i></div>
                         <div class="input-group">
-                            <input type="text" name="search" class="form-control form--control" placeholder="@lang('Search by name, profession or country')">
+                            <input type="text" name="search" class="form-control form--control" placeholder="@lang('Search by name, profession or country...')">
                             <button class="btn btn--base btn--round btn--md">@lang('Search')</button>
                         </div>
                     </div>
