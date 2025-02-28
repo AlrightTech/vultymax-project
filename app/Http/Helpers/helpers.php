@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Config;
 
 function systemDetails()
 {
-    $system['name'] = 'infulab';
+    $system['name'] = 'vultymax';
     $system['version'] = '2.0';
     $system['build_version'] = '5.0.5';
     return $system;
