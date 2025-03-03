@@ -9,7 +9,8 @@ $footer = getContent('footer.content', true);
         <div class="row gy-4 justify-content-between">
             <div class="col-lg-3 col-sm-6 col-md-5">
                 <div class="footer-widget">
-                    <a class="logo mb-4" href="{{ route('home') }}"><img src="{{ siteLogo() }}" alt="Logo"></a>
+                    <!-- <a class="logo mb-4" href="{{ route('home') }}"><img src="{{ siteLogo() }}" alt="Logo"></a> -->
+                     <h1 class="text-white text-uppercase fst-italic fw-bold footer-SiteTitle">Vultymax</h1>
                     <p>{{ __(@$footer->data_values->description) }}</p>
                     <ul class="social-links d-flex mt-4 flex-wrap gap-3">
                         @foreach ($socialIcons as $social)
@@ -66,7 +67,7 @@ $footer = getContent('footer.content', true);
             </div>
         </div>
 
-        <p class="text-center border-top my-4 flex-wrap pt-4">
+        <p class="text-center text-white border-top my-4 flex-wrap pt-4">
             @lang('Copyright') &copy; @php echo date('Y') @endphp. @lang('All Rights Reserved')
         </p>
     </div>

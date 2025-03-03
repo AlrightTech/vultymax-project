@@ -73,7 +73,7 @@ body {
 	padding: 0;
 	margin: 0;
 	font-size: 16px;
-	color: hsl(var(--white));
+	/* color: hsl(var(--white)); */
 	line-height: 1.6;
 	font-family: var(--body-font);
 	display: flex;
@@ -2070,7 +2070,8 @@ input:-webkit-autofill {
 }
 
 .footer-links li a:hover {
-	color: rgb(var(--base));
+	/* color: rgb(var(--base)); */
+	color: #ffffff91;
 }
 
 .footer-top {
@@ -4595,11 +4596,12 @@ label.required:after {
 
 .why-thumb {
 	position: absolute;
-	bottom: 0px;
-	left: 50%;
-	transform: translateX(-50%);
-	max-width: 500px;
-	z-index: -1;
+    /* bottom: 0px; */
+    top: 20%;
+    left: 52%;
+    transform: translateX(-50%);
+    max-width: 500px;
+    z-index: -1;
 }
 
 
@@ -4655,4 +4657,9 @@ label.required:after {
 
 .register-disable {
 	text-align: center;
+}
+
+
+.footer-SiteTitle{
+	letter-spacing: -4px;
 }

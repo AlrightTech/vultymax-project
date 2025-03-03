@@ -12,8 +12,9 @@
 
 @if(!in_array($currentRouteName, $routes))
 
-    <section class="inner-banner bg_img" style="background: url('{{ getImage('assets/images/frontend/breadcrumb/'.$uri.'.png','1920x250') }}') center;">
-        <div class="container">
+    <section class="inner-banner bg_img position-relative" style="background: url('{{ getImage('assets/images/frontend/breadcrumb/'.$uri.'.png','1920x250') }}') center;">
+        <div class="overlay h-100 w-100 position-absolute" style="background-color: rgba(0, 0, 0, 0.6);"></div>
+        <div class="container"> 
             <div class="row justify-content-center">
                 <div class="col-lg-7 col-xl-6 text-center">
                     <h3 class="title text-white">{{ __($pageTitle) }}</h3>
