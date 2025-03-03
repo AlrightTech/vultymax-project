@@ -30,63 +30,63 @@ class ManageInfluencersController extends Controller
 
     public function activeInfluencers()
     {
-        $pageTitle   = 'Active Influencers';
+        $pageTitle   = 'Active Sponsees';
         $influencers = $this->influencerData('active');
         return view('admin.influencers.list', compact('pageTitle', 'influencers'));
     }
 
     public function bannedInfluencers()
     {
-        $pageTitle   = 'Banned Influencers';
+        $pageTitle   = 'Banned Sponsees';
         $influencers = $this->influencerData('banned');
         return view('admin.influencers.list', compact('pageTitle', 'influencers'));
     }
 
     public function emailUnverifiedInfluencers()
     {
-        $pageTitle   = 'Email Unverified Influencers';
+        $pageTitle   = 'Email Unverified Sponsees';
         $influencers = $this->influencerData('emailUnverified');
         return view('admin.influencers.list', compact('pageTitle', 'influencers'));
     }
 
     public function kycUnverifiedInfluencers()
     {
-        $pageTitle   = 'KYC Unverified Influencers';
+        $pageTitle   = 'KYC Unverified Sponsees';
         $influencers = $this->influencerData('kycUnverified');
         return view('admin.influencers.list', compact('pageTitle', 'influencers'));
     }
 
     public function kycPendingInfluencers()
     {
-        $pageTitle   = 'KYC Unverified Influencers';
+        $pageTitle   = 'KYC Unverified Sponsees';
         $influencers = $this->influencerData('kycPending');
         return view('admin.influencers.list', compact('pageTitle', 'influencers'));
     }
 
     public function emailVerifiedInfluencers()
     {
-        $pageTitle   = 'Email Verified Influencers';
+        $pageTitle   = 'Email Verified Sponsees';
         $influencers = $this->influencerData('emailVerified');
         return view('admin.influencers.list', compact('pageTitle', 'influencers'));
     }
 
     public function mobileUnverifiedInfluencers()
     {
-        $pageTitle   = 'Mobile Unverified Influencers';
+        $pageTitle   = 'Mobile Unverified Sponsees';
         $influencers = $this->influencerData('mobileUnverified');
         return view('admin.influencers.list', compact('pageTitle', 'influencers'));
     }
 
     public function mobileVerifiedInfluencers()
     {
-        $pageTitle   = 'Mobile Verified Influencers';
+        $pageTitle   = 'Mobile Verified Sponsees';
         $influencers = $this->influencerData('mobileVerified');
         return view('admin.influencers.list', compact('pageTitle', 'influencers'));
     }
 
     public function influencersWithBalance()
     {
-        $pageTitle   = 'Influencers with Balance';
+        $pageTitle   = 'Sponsees with Balance';
         $influencers = $this->influencerData('withBalance');
         return view('admin.influencers.list', compact('pageTitle', 'influencers'));
     }
