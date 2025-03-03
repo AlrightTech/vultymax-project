@@ -93,19 +93,19 @@
         ]
     },
     "manage_influencer": {
-        "title": "Manage Influencers",
+        "title": "Manage Sponsees",
         "icon": "las la-user-friends",
         "counters": ["bannedInfluencersCount","emailUnverifiedInfluencersCount","mobileUnverifiedInfluencersCount","kycUnverifiedInfluencersCount","kycPendingInfluencersCount"],
         "menu_active": "admin.influencers*",
         "submenu": [{
                 "keyword": ["active Influencers", "Manage Influencers", "Influencers management", "Influencers control", "Influencers status", "clients activity", "clients analytics"],
-                "title": "Active Influencers",
+                "title": "Active Sponsees",
                 "route_name": "admin.influencers.active",
                 "menu_active": "admin.influencers.active"
             },
             {
                 "keyword": ["banned Influencers", "Manage Influencers", "Influencers management", "Influencers bans", "Influencers activity"],
-                "title": "Banned Influencers",
+                "title": "Banned Sponsees",
                 "route_name": "admin.influencers.banned",
                 "menu_active": "admin.influencers.banned",
                 "counter": "bannedInfluencersCount"
