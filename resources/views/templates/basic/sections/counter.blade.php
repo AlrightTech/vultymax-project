@@ -8,14 +8,14 @@ $counters = getContent('counter.element', false, null, true);
                 <div class="col-lg-6 col-sm-6 col-xl-3">
                     <div class="counter__item">
                         <div class="inner">
-                            <div class="counter__item-icon">
+                            <div class="counter__item-icon text-white">
                                 @php
                                     echo @$counter->data_values->counter_icon;
                                 @endphp
                             </div>
                             <div class="counter__item-content">
                                 <h3 class="counter__item-title text-white">{{ @$counter->data_values->counter_digit }}</h3>
-                                <span class="info">{{ __(@$counter->data_values->title) }}</span>
+                                <span class="info text-white">{{ __(@$counter->data_values->title) }}</span>
                             </div>
                         </div>
                     </div>

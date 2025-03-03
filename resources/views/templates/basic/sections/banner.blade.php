@@ -3,7 +3,7 @@ $banner = getContent('banner.content', true);
 @endphp
 <section class="banner-section bg_img overflow-hidden mb-0">
     <div class="container">
-        <div class="d-flex justify-content-lg-between flex-wrap">
+        <div class="d-flex justify-content-lg-between flex-wrap py-5">
             <div class="banner-content">
                 <h1 class="title">{{ __(@$banner->data_values->heading) }}</h1>
                 <p>{{ __(@$banner->data_values->subheading) }}</p>
@@ -28,7 +28,7 @@ $banner = getContent('banner.content', true);
                 </ul>
                 @endif
             </div>
-            <div class="banner-thumb ps-xl-5 ps-lg-4 d-lg-block d-none">
+            <div class="banner-thumb d-lg-block d-none">
                 <img src="{{ getImage('assets/images/frontend/banner/' . @$banner->data_values->image, '500x735') }}" alt="banner_image">
             </div>
         </div>
