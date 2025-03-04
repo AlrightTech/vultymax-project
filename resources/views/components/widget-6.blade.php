@@ -1,21 +1,21 @@
 @props([
-    'link'       => null,
-    'title'      => null,
-    'value'      => null,
-    'icon'       => '',
-    'bg'         => 'primary',
-    'outline'    => false,
-    'heading'    => null,
-    'subheading' => null,
-    'viewMoreIcon'   => true
+'link' => null,
+'title' => null,
+'value' => null,
+'icon' => '',
+'bg' => 'primary',
+'outline' => false,
+'heading' => null,
+'subheading' => null,
+'viewMoreIcon' => true
 ])
 
 <a href="{{ $link }}">
     <div class="widget-seven bg--{{ $bg }} @if($outline) outline @endif">
-        <div class="widget-seven__content">
+        <div class="widget-seven__content ">
             <span class="widget-seven__content-icon">
                 <span class="icon">
-                    <i class="{{ $icon }}"></i>
+                    <img src="{{ $icon }}"></img>
                 </span>
             </span>
             <div class="widget-seven__description">
@@ -30,9 +30,9 @@
         </div>
 
         @if ($viewMoreIcon)
-        <span class="widget-seven__arrow">
+        <!-- <span class="widget-seven__arrow">
             <i class="fas fa-chevron-right"></i>
-        </span>
+        </span> -->
         @endif
     </div>
 </a>

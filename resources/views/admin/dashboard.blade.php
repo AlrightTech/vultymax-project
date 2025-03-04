@@ -4,32 +4,33 @@
 
     <div class="row gy-4">
 
-        <div class="col-xxl-3 col-sm-6">
+        <div class="col-md-3 col-xxl-3 col-sm-6 ">
 
             <x-widget
                 style="6"
                 link="{{route('admin.users.all')}}"
-                icon="las la-users"
+                 icon="/assets/admin/images/Total Users.svg"
                 title="Total Users"
                 value="{{$widget['total_users']}}"
                 bg="primary"
             />
         </div><!-- dashboard-w1 end -->
-        <div class="col-xxl-3 col-sm-6">
+
+        <div class="col-md-3 col-xxl-3 col-sm-6">
             <x-widget
                 style="6"
                 link="{{route('admin.users.active')}}"
-                icon="las la-user-check"
+                icon="/assets/admin/images/Active Users.svg"
                 title="Active Users"
                 value="{{$widget['verified_users']}}"
                 bg="success"
             />
         </div><!-- dashboard-w1 end -->
-        <div class="col-xxl-3 col-sm-6">
+        <div class="colmdcol-xxl-3 col-sm-6">
             <x-widget
                 style="6"
                 link="{{route('admin.users.email.unverified')}}"
-                icon="lar la-envelope"
+                icon="/assets/admin/images/unverified email.svg"
                 title="Email Unverified Users"
                 value="{{$widget['email_unverified_users']}}"
                 bg="danger"
@@ -39,7 +40,7 @@
             <x-widget
                 style="6"
                 link="{{route('admin.users.mobile.unverified')}}"
-                icon="las la-comment-slash"
+                icon="/assets/admin/images/mobile unverified email.svg"
                 title="Mobile Unverified Users"
                 value="{{$widget['mobile_unverified_users']}}"
                 bg="warning"
@@ -52,7 +53,7 @@
             <x-widget
                 style="7"
                 link="{{ route('admin.influencers.all') }}"
-                title="Total Influencers"
+                title="Total Sponsees "
                 icon="las la-users"
                 value="{{ $widget['total_influencers'] }}"
                 bg="success"
