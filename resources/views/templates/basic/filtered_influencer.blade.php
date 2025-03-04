@@ -8,7 +8,10 @@ $emptyMsgImage = getContent('empty_message.content', true);
 @endif
 @forelse ($influencers as $influencer)
 <div class="col-md-6 col-lg-4 col-xl-4 col-sm-9 col-xs-10">
-    <div class="influencer-item">
+    <div class="influencer-item position-relative">
+        <div class="position-absolute SponseeCards-Labels d-flex justify-content-center align-items-center">
+            <span class="text-center text-white">90%</span>
+        </div>
         @auth
             @if (in_array($influencer->id, @$influencersId))
             <a href="javascript:void(0)" class="favoriteBtn active" data-influencer_id="{{ $influencer->id }}"><i class="las la-heart"></i></a>

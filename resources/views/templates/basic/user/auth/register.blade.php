@@ -69,10 +69,10 @@
                                         <div class="form-group">
                                             <div class="form--check">
                                                 <input class="form-check-input" id="agree" type="checkbox" @checked(old('agree')) name="agree" required>
-                                                <div class="form-check-label">
+                                                <div class="form-check-label ">
                                                     <label class="" for="agree"> @lang('I agree with')</label>
                                                     @foreach ($policyPages as $policy)
-                                                        <a class="text--base" href="{{ route('policy.pages', [slug($policy->data_values->title), $policy->id]) }}" target="_blank">{{ __($policy->data_values->title) }}</a>
+                                                        <a class=" text-dark" href="{{ route('policy.pages', [slug($policy->data_values->title), $policy->id]) }}" target="_blank">{{ __($policy->data_values->title) }}</a>
                                                         @if (!$loop->last)
                                                             ,
                                                         @endif

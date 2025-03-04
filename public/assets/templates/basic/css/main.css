@@ -92,6 +92,7 @@ p {
 a {
 	text-decoration: none;
 	color: hsl(var(--white));
+	/* color:var(--black); */
 }
 
 a:hover {
@@ -4597,7 +4598,7 @@ label.required:after {
 .why-thumb {
 	position: absolute;
     /* bottom: 0px; */
-    top: 20%;
+    top: 10%;
     left: 52%;
     transform: translateX(-50%);
     max-width: 500px;
@@ -4662,4 +4663,39 @@ label.required:after {
 
 .footer-SiteTitle{
 	letter-spacing: -4px;
+}
+
+.inner-banner {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+}
+
+.inner-banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #FD5949B2;
+    z-index: 1;
+}
+
+.inner-banner .container {
+    position: relative;
+    z-index: 2;
+}
+
+.SponseeCards-Labels{
+	top: 0;
+	right: 0;
+	background-color: #008000;
+	width: 50px;
+	height: 50px;
+	border-radius: 4px;
+}
+
+.detailPage-labels{
+	color: #FF1618;
 }

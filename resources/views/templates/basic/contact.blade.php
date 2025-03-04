@@ -74,9 +74,9 @@
                         </div>
 
                         <div class="col-lg-5 ps-lg-4 ps-xl-5">
-                            <div class="contacts-info">
+                            <div class="contacts-info ">
                                 <img class="contact-img mb-4" src="{{ getImage('assets/images/frontend/contact_us/' . @$contact->data_values->image, '350x270') }}" alt="image">
-                                <div class="address row gy-4">
+                                <div class="address row gy-4 d-none">
                                     <div class="location col-12">
                                         <div class="contact-card">
                                             <span class="icon"><i class="las la-map-marker"></i></span>
@@ -86,18 +86,18 @@
                                     <div class="col-12">
                                         <div class="contact-card">
                                             <span class="icon"><i class="las la-phone-volume"></i></span>
-                                            <a href="tel:{{ @$contact->data_values->contact_number_one }}">{{ @$contact->data_values->contact_number_one }}</a>
+                                            <a class="text-dark" href="tel:{{ @$contact->data_values->contact_number_one }}">{{ @$contact->data_values->contact_number_one }}</a>
                                         </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="contact-card">
                                             <span class="icon"><i class="las la-envelope-open"></i></span>
-                                            <a href="mailto:{{ @$contact->data_values->email_address }}">{{ @$contact->data_values->email_address }}</a>
+                                            <a class="text-dark" href="mailto:{{ @$contact->data_values->email_address }}">{{ @$contact->data_values->email_address }}</a>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="footer-widget">
+                                <div class="footer-widget d-none">
                                     <ul class="social-links d-flex align-items-center mt-4 flex-wrap pt-2">
                                         <li>
                                             <h6 class="fs--15px me-2">@lang('Social'):</h6>

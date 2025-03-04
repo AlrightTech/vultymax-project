@@ -197,8 +197,8 @@ $content = getContent('top_influencer.content', true);
 
                     <div class="card custom--card">
                         <div class="card-header bg--light">
-                            <h6 class="text--base">@lang('Price')</h6>
-                            <h3 class="text--base">{{ showAmount($service->price) }}</h3>
+                            <h6 class="detailPage-labels">@lang('Price')</h6>
+                            <h3 class="detailPage-labels">{{ showAmount($service->price) }}</h3>
                         </div>
                         <div class="card-body">
                             <ul class="list list-style-one ps-3 mb-3">
