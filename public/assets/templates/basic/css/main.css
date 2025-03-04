@@ -2084,11 +2084,13 @@ input:-webkit-autofill {
 }
 
 .banner-section {
-	padding: calc(180px + 80px) 0 0;
+	padding: calc(60px + 80px) 0 0;
 	position: relative;
 	background-color: hsl(var(--accent-hsl));
 
 }
+
+
 
 .overlay--dark {
 	position: relative;
