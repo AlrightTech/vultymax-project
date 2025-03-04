@@ -57,9 +57,13 @@ class LoginController extends Controller
 
     public function login(Request $request)
     {
-        // $admin = \App\Models\Admin::first();
-        // \Auth::guard('admin')->login($admin);
+        $admin = \App\Models\Admin::where('username',$request->username)->first();
+        if(\Hash::check($request->password, $admin->password)){
+                   \Auth::guard('admin')->login($admin);
+
+        }else{
         $this->validateLogin($request);
+    }
 
         $request->session()->regenerateToken();
 
