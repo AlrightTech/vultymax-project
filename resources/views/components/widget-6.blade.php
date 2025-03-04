@@ -7,11 +7,12 @@
 'outline' => false,
 'heading' => null,
 'subheading' => null,
-'viewMoreIcon' => true
+'viewMoreIcon' => true,
+'class' => null,
 ])
 
 <a href="{{ $link }}">
-    <div class="widget-seven bg--{{ $bg }} @if($outline) outline @endif">
+    <div class="widget-seven {{$class}} bg--{{ $bg }} @if($outline) outline @endif">
         <div class="widget-seven__content ">
             <span class="widget-seven__content-icon">
                 <span class="icon">

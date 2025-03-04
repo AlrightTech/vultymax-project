@@ -4,9 +4,10 @@
     'value' => null,
     'icon' => '',
     'bg' => 'primary',
+    'class' => null
 ])
 
-<div class="widget-six bg--white p-3 rounded-2 box-shadow3">
+<div class="widget-six bg--white p-3 rounded-2 box-shadow3  {{$class}}">
     <div class="widget-six__top">
         <i class="{{ $icon }} bg--{{ $bg }} text--white b-radius--5"></i>
         <p>{{ __($title) }}</p>
