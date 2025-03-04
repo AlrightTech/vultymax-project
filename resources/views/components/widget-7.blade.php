@@ -13,7 +13,8 @@
     </div>
     <span class="widget-eight__content-icon">
         <span class="icon">
-            <i class="{{ $icon }}"></i>
+                                <img src="{{ $icon }}"></img>
+
         </span>
     </span>
 </a>

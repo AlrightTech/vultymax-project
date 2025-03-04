@@ -437,6 +437,10 @@ a {
   background-color: var(--color) !important;
 }
 
+.bg-primary-dashboardCards{
+  background-color: #9999ea !important;
+}
+
 .bg--secondary {
   --color: #868e96;
   background-color: var(--color) !important;
@@ -4415,15 +4419,15 @@ th.w-85 {
 
 .widget-seven {
   border: 1px solid var(--color);
-  border-radius: 5px;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.04);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
-  background-color: #fff !important;
-  padding: 20px 18px;
-  display: flex;
-  gap: 5px;
-  justify-content: space-between;
-  height: 100%;
+    border-radius: 5px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+    background-color: #fff !important;
+    padding: 9px 12px;
+    display: flex;
+    gap: 5px;
+    justify-content: space-between;
+    height: 100%;
 }
 
 .widget-seven.outline {
@@ -4432,13 +4436,13 @@ th.w-85 {
 
 .widget-seven .widget-seven__content {
   display: flex;
-  gap: 16px;
+  gap: 10px;
   align-items: center;
 }
 
 .widget-seven .widget-seven__content-icon {
-  width: 55px;
-  height: 55px;
+  width: 40px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -4485,9 +4489,10 @@ th.w-85 {
 
 .widget-seven .widget-seven__content-title,
 .widget-seven .widget-seven__content-subheading {
-  font-size: 14px;
+  font-size: 10px;
   font-weight: 500;
   color: #34495e;
+  white-space: nowrap;
 }
 
 .widget-seven .widget-seven__content-amount {
@@ -4619,9 +4624,10 @@ th.w-85 {
 }
 
 .widget-eight .widget-eight__content-title {
-  font-size: 14px;
+  font-size: 10px;
   font-weight: 500;
   color: #34495e;
+  white-space: nowrap;
 }
 
 @media screen and (max-width: 1440px) {
