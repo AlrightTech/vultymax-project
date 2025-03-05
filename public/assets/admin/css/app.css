@@ -437,6 +437,10 @@ a {
     background-color: var(--color) !important;
 }
 
+.bg-primary-dashboardCards{
+  background-color: #9999ea !important;
+}
+
 .bg--secondary {
     --color: #868e96;
     background-color: var(--color) !important;
@@ -4447,14 +4451,14 @@ th.w-85 {
 }
 
 .widget-seven .widget-seven__content-icon {
-    width: 55px;
-    height: 55px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-    position: relative;
-    z-index: 1;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
 }
 
 .widget-seven .widget-seven__content-icon::after {
@@ -4495,9 +4499,10 @@ th.w-85 {
 
 .widget-seven .widget-seven__content-title,
 .widget-seven .widget-seven__content-subheading {
-    font-size: 14px;
-    font-weight: 500;
-    color: #34495e;
+  font-size: 10px;
+  font-weight: 500;
+  color: #34495e;
+  white-space: nowrap;
 }
 
 .widget-seven .widget-seven__content-amount {
@@ -4629,9 +4634,10 @@ th.w-85 {
 }
 
 .widget-eight .widget-eight__content-title {
-    font-size: 14px;
-    font-weight: 500;
-    color: #34495e;
+  font-size: 10px;
+  font-weight: 500;
+  color: #34495e;
+  white-space: nowrap;
 }
 
 @media screen and (max-width: 1440px) {
@@ -4719,13 +4725,13 @@ th.w-85 {
 
 .widget-card-wrapper .widget-card-amount,
 .widget-card-inner .widget-card-amount {
-    font-size: 16px;
+  font-size: 13px;
 }
 
 .widget-card-wrapper .widget-card-title,
 .widget-card-inner .widget-card-title {
-    font-size: 14px;
-    font-weight: 300;
+  font-size: 11px;
+  font-weight: 300;
 }
 
 .widget-card {

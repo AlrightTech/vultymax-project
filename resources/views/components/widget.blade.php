@@ -15,6 +15,7 @@
     'outline' => false,
     'type' => 1,
     'viewMoreIcon' => true,
+    'class'=>null
 ])
 
 @php
@@ -37,11 +38,11 @@
     <x-widget-4 :link=$link :title=$title :value=$value :bg=$bg :color=$color />
 @endif
 @if ($style == 5)
-    <x-widget-5 :link=$link :title=$title :value=$value :icon=$icon :bg=$bg />
+    <x-widget-5 :link=$link :title=$title :value=$value :icon=$icon :bg=$bg  :class="$class"/>
 @endif
 @if ($style == 6)
     <x-widget-6 :link=$link :title=$title :value=$value :icon=$icon :bg=$bg :outline=$outline :heading=$heading :subheading=$subheading
-        :viewMoreIcon=$viewMoreIcon />
+        :viewMoreIcon=$viewMoreIcon  :class="$class" />
 @endif
 @if ($style == 7)
     <x-widget-7 :link=$link :title=$title :value=$value :icon=$icon :bg=$bg :outline=$outline :type=$type />
