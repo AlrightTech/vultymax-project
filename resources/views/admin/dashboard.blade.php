@@ -67,7 +67,7 @@
             style="7"
             link="{{ route('admin.influencers.active') }}"
             title="Active Sponsees"
-            icon="las la-user-check"
+            icon="/assets/admin/images/Active Users.svg"
             value="{{ $widget['verified_influencers'] }}"
             bg="warning"
         />
@@ -78,7 +78,7 @@
             style="7"
             link="{{ route('admin.influencers.email.unverified') }}"
             title="Email Unverified Sponsees"
-            icon="lar la-envelope"
+            icon="/assets/admin/images/unverified email.svg"
             value="{{ $widget['email_unverified_influencers'] }}"
             bg="danger"
         />
@@ -89,9 +89,10 @@
             style="7"
             link="{{ route('admin.influencers.mobile.unverified') }}"
             title="Mobile Unverified Sponsees"
-            icon="las la-comment-slash"
+            icon="/assets/admin/images/Mobile unverified blue.svg"
             value="{{ $widget['mobile_unverified_influencers'] }}"
             bg="primary"
+            class="bg-primary"
         />
     </div>
     <!-- dashboard-w1 end -->
@@ -104,7 +105,7 @@
             style="7"
             link="{{ route('admin.influencers.all') }}"
             title="Total Brands "
-            icon="las la-users"
+            icon="/assets/admin/images/Total Users.svg"
             value="{{ $widget['total_influencers'] }}"
             bg="success"
         />
@@ -115,7 +116,7 @@
             style="7"
             link="{{ route('admin.influencers.active') }}"
             title="Active Brands"
-            icon="las la-user-check"
+            icon="/assets/admin/images/Active Users.svg"
             value="{{ $widget['verified_influencers'] }}"
             bg="warning"
         />
@@ -126,7 +127,7 @@
             style="7"
             link="{{ route('admin.influencers.email.unverified') }}"
             title="Email Unverified Brands"
-            icon="lar la-envelope"
+            icon="/assets/admin/images/unverified email.svg"
             value="{{ $widget['email_unverified_influencers'] }}"
             bg="danger"
         />
@@ -137,7 +138,7 @@
             style="7"
             link="{{ route('admin.influencers.mobile.unverified') }}"
             title="Mobile Unverified Brands"
-            icon="las la-comment-slash"
+            icon="/assets/admin/images/Mobile unverified blue.svg"
             value="{{ $widget['mobile_unverified_influencers'] }}"
             bg="primary"
         />
@@ -147,19 +148,22 @@
 <!-- row end-->
 
 <div class="row mt-2 gy-4">
-    <div class="col-xxl-6">
-        <div class="card box-shadow3 h-100">
+    <!-- Deposits card -->
+    <div class="col-md-6 col-xxl-6">
+        <div class="card h-100 bg-transparent">
             <div class="card-body">
                 <h5 class="card-title">@lang('Deposits')</h5>
+                <!-- Total Deposited -->
                 <div class="widget-card-wrapper">
-                    <div class="widget-card bg--success">
+                    <div class="widget-card bg--success px-0 py-4">
                         <a
                             href="{{ route('admin.deposit.list') }}"
                             class="widget-card-link"
                         ></a>
-                        <div class="widget-card-left">
+                        <div class="widget-card-left ">
                             <div class="widget-card-icon">
-                                <i class="fas fa-hand-holding-usd"></i>
+                                <!-- <i class="fas fa-hand-holding-usd"></i> -->
+                                <img src="/assets/admin/images/Total Deposited.svg" alt="total deposited icon">
                             </div>
                             <div class="widget-card-content">
                                 <h6 class="widget-card-amount">
@@ -179,14 +183,15 @@
                         </span>
                     </div>
 
-                    <div class="widget-card bg--warning">
+                    <!-- Pending Deposits -->
+                    <div class="widget-card bg--warning px-2 py-4">
                         <a
                             href="{{ route('admin.deposit.pending') }}"
                             class="widget-card-link"
                         ></a>
                         <div class="widget-card-left">
                             <div class="widget-card-icon">
-                                <i class="fas fa-spinner"></i>
+                                <img src="/assets/admin/images/Pending Deposits.svg" alt="Pending Deposits icon">
                             </div>
                             <div class="widget-card-content">
                                 <h6 class="widget-card-amount">
@@ -202,14 +207,15 @@
                         </span>
                     </div>
 
-                    <div class="widget-card bg--danger">
+                    <!-- Rejected Deposits -->
+                    <div class="widget-card bg--danger px-0 py-4">
                         <a
                             href="{{ route('admin.deposit.rejected') }}"
                             class="widget-card-link"
                         ></a>
                         <div class="widget-card-left">
                             <div class="widget-card-icon">
-                                <i class="fas fa-ban"></i>
+                                <img src="/assets/admin/images/Rejected Deposits.svg" alt="Rejected Deposits icon">
                             </div>
                             <div class="widget-card-content">
                                 <h6 class="widget-card-amount">
@@ -225,14 +231,15 @@
                         </span>
                     </div>
 
-                    <div class="widget-card">
+                    <!-- Deposited Charge -->
+                    <div class="widget-card px-2 py-4">
                         <a
                             href="{{ route('admin.deposit.list') }}"
                             class="widget-card-link"
                         ></a>
                         <div class="widget-card-left">
                             <div class="widget-card-icon">
-                                <i class="fas fa-percentage"></i>
+                                <img src="/assets/admin/images/Deposited Charge.svg" alt="Deposited Charge icon" width="20px">
                             </div>
                             <div class="widget-card-content">
                                 <h6 class="widget-card-amount">
@@ -255,19 +262,23 @@
             </div>
         </div>
     </div>
-    <div class="col-xxl-6">
-        <div class="card box-shadow3 h-100">
+
+    <!-- Withdrawals card -->
+    <div class="col-md-6 col-xxl-6">
+        <div class="card h-100 bg-transparent">
             <div class="card-body">
                 <h5 class="card-title">@lang('Withdrawals')</h5>
                 <div class="widget-card-wrapper">
-                    <div class="widget-card bg--success">
+
+                    <!-- Total withdrawals -->
+                    <div class="widget-card bg--success px-0 py-4">
                         <a
                             href="{{ route('admin.withdraw.log') }}"
                             class="widget-card-link"
                         ></a>
                         <div class="widget-card-left">
                             <div class="widget-card-icon">
-                                <i class="lar la-credit-card"></i>
+                                <img src="/assets/admin/images/Total withdrawn.svg" alt="Total withdrawn icon">
                             </div>
                             <div class="widget-card-content">
                                 <h6 class="widget-card-amount">
@@ -289,14 +300,15 @@
                         </span>
                     </div>
 
-                    <div class="widget-card bg--warning">
+                    <!-- Pending withdrawals -->
+                    <div class="widget-card bg--warning px-2 py-4">
                         <a
                             href="{{ route('admin.withdraw.pending') }}"
                             class="widget-card-link"
                         ></a>
                         <div class="widget-card-left">
                             <div class="widget-card-icon">
-                                <i class="fas fa-spinner"></i>
+                                <img src="/assets/admin/images/Pending Deposits.svg" alt="Pending Deposits icon">
                             </div>
                             <div class="widget-card-content">
                                 <h6 class="widget-card-amount">
@@ -312,14 +324,15 @@
                         </span>
                     </div>
 
-                    <div class="widget-card bg--danger">
+                    <!-- Rejected withdrawals -->
+                    <div class="widget-card bg--danger px-0 py-2">
                         <a
                             href="{{ route('admin.withdraw.rejected') }}"
                             class="widget-card-link"
                         ></a>
                         <div class="widget-card-left">
                             <div class="widget-card-icon">
-                                <i class="las la-times-circle"></i>
+                                <img src="/assets/admin/images/Rejected Withdrawals.svg" alt="Rejected Withdrawals icon">
                             </div>
                             <div class="widget-card-content">
                                 <h6 class="widget-card-amount">
@@ -337,14 +350,15 @@
                         </span>
                     </div>
 
-                    <div class="widget-card">
+                    <!-- Withdrawals charge -->
+                    <div class="widget-card px-2 py-4">
                         <a
                             href="{{ route('admin.withdraw.log') }}"
                             class="widget-card-link"
                         ></a>
                         <div class="widget-card-left">
-                            <div class="widget-card-icon">
-                                <i class="las la-percent"></i>
+                            <div class="widget-card-icon Withdrawal-Charge">
+                                <img src="/assets/admin/images/Deposited Charge.svg" alt="Deposited Charge icon">
                             </div>
                             <div class="widget-card-content">
                                 <h6 class="widget-card-amount">
@@ -372,67 +386,67 @@
 </div>
 
 <div class="row gy-4 mt-2">
-    <div class="col-xxl-2 col-lg-4 col-sm-6">
+    <div class="col-md-2 col-xxl-2 col-lg-2 col-sm-6">
         <x-widget
             style="5"
             link="{{ route('admin.order.index') }}"
-            icon="las la-list-ul"
-            title="Total Order"
+            icon="/assets/admin/images/Total Deals.svg"
+            title="Total Deals"
             value="{{ $data['total_order'] }}"
             bg="primary"
         />
     </div>
     <!-- dashboard-w1 end -->
-    <div class="col-xxl-2 col-lg-4 col-sm-6">
+    <div class="col-md-2 col-xxl-2 col-lg-2 col-sm-6">
         <x-widget
             style="5"
             link="{{ route('admin.order.pending') }}"
-            icon="las la-spinner"
-            title="Pending Order"
+            icon="/assets/admin/images/Pending Deals.svg"
+            title="Pending Deals"
             value="{{ $data['pending_order'] }}"
             bg="1"
         />
     </div>
     <!-- dashboard-w1 end -->
-    <div class="col-xxl-2 col-lg-4 col-sm-6">
+    <div class="col-md-2 col-xxl-2 col-lg-2 col-sm-6">
         <x-widget
             style="5"
             link="{{ route('admin.order.jobDone') }}"
-            icon="las la-check-circle"
-            title="Job Done Order"
+            icon="/assets/admin/images/Completed Deals.svg"
+            title="Completed Deals"
             value="{{ $data['delivered_order'] }}"
             bg="2"
         />
     </div>
     <!-- dashboard-w1 end -->
-    <div class="col-xxl-2 col-lg-4 col-sm-6">
+    <div class="col-md-2 col-xxl-2 col-lg-2 col-sm-6">
         <x-widget
             style="5"
             link="{{ route('admin.order.completed') }}"
-            icon="las la-check-double"
-            title="Completed Order"
+            icon="/assets/admin/images/Successful Deals.svg"
+            title="Successful Deals"
             value="{{ $data['completed_order'] }}"
             bg="3"
         />
     </div>
     <!-- dashboard-w1 end -->
-    <div class="col-xxl-2 col-lg-4 col-sm-6">
+    <div class=" col-md-2 col-xxl-2 col-lg-2 col-sm-6">
         <x-widget
             style="5"
             link="{{ route('admin.order.reported') }}"
-            icon="las la-gavel"
-            title="Reported Order"
+            icon="/assets/admin/images/Reported Deals.svg"
+            title="Reported Deals"
             value="{{ $data['reported_order'] }}"
             bg="4"
         />
     </div>
     <!-- dashboard-w1 end -->
-    <div class="col-xxl-2 col-lg-4 col-sm-6">
+    <div class="col-md-2 col-xxl-2 col-lg-2 col-sm-6">
         <x-widget
             style="5"
             link="{{ route('admin.order.cancelled') }}"
-            icon="las la-times"
-            title="Cancelled Order"
+            icon="/assets/admin/images/Cancelled Deals.svg"
+            title="Cancelled Deals"
             value="{{ $data['cancelled_order'] }}"
             bg="5"
         />
@@ -441,49 +455,51 @@
 </div>
 <!-- row end-->
 
+
+
 <div class="row gy-4 mt-2">
-    <div class="col-xxl-3 col-sm-6">
+    <div class="col-xxl-3 col-sm-3">
         <x-widget
             style="6"
             link="{{ route('admin.service.index') }}"
-            title="Total Service"
-            icon="/assets/admin/images/mobile unverified email.svg"
+            title="Total Sponsorships"
+            icon="/assets/admin/images/Total users.svg"
             value="{{ $data['total_service'] }}"
             bg="success"
             outline="true"
         />
     </div>
     <!-- dashboard-w1 end -->
-    <div class="col-xxl-3 col-sm-6">
+    <div class="col-xxl-3 col-sm-3">
         <x-widget
             style="6"
             link="{{ route('admin.service.pending') }}"
-            title="Pending Service"
-            icon="las la-spinner"
+            title="Pending Sponsorships"
+            icon="/assets/admin/images/Pending Sponsorships.png"
             value="{{ $data['pending_service'] }}"
             bg="warning"
             outline="true"
         />
     </div>
     <!-- dashboard-w1 end -->
-    <div class="col-xxl-3 col-sm-6">
+    <div class="col-xxl-3 col-sm-3">
         <x-widget
             style="6"
             link="{{ route('admin.service.approved') }}"
-            title="Approved Service"
-            icon="las la-check-circle"
+            title="Approved Sponsorships"
+            icon="/assets/admin/images/Approved Sponsorships.svg"
             value="{{ $data['approved_service'] }}"
             bg="danger"
             outline="true"
         />
     </div>
     <!-- dashboard-w1 end -->
-    <div class="col-xxl-3 col-sm-6">
+    <div class="col-xxl-3 col-sm-3">
         <x-widget
             style="6"
             link="{{ route('admin.service.rejected') }}"
-            title="Rejected Service"
-            icon="far fa-user"
+            title="Rejected Sponsorships"
+            icon="/assets/admin/images/Rejected Sponsorships.svg"
             value="{{ $data['rejected_service'] }}"
             bg="primary"
             outline="true"
@@ -493,74 +509,77 @@
 </div>
 <!-- row end-->
 
+
 <div class="row gy-4 mt-2">
-    <div class="col-xxl-2 col-lg-4 col-sm-6">
+    <div class="col-md-2 col-xxl-2 col-lg-2 col-sm-6">
         <x-widget
             style="5"
-            link="{{ route('admin.hiring.index') }}"
-            icon="las la-list-ul"
-            title="Total Hiring"
-            value="{{ $data['total_hiring'] }}"
+            link="{{ route('admin.order.index') }}"
+            icon="/assets/admin/images/Total Deals.svg"
+            title="Total Deals"
+            value="{{ $data['total_order'] }}"
             bg="primary"
         />
     </div>
     <!-- dashboard-w1 end -->
-    <div class="col-xxl-2 col-lg-4 col-sm-6">
+    <div class="col-md-2 col-xxl-2 col-lg-2 col-sm-6">
         <x-widget
             style="5"
-            link="{{ route('admin.hiring.pending') }}"
-            icon="las la-spinner"
-            title="Pending Hiring"
-            value="{{ $data['pending_hiring'] }}"
+            link="{{ route('admin.order.pending') }}"
+            icon="/assets/admin/images/Pending Deals.svg"
+            title="Pending Deals"
+            value="{{ $data['pending_order'] }}"
             bg="1"
         />
     </div>
     <!-- dashboard-w1 end -->
-    <div class="col-xxl-2 col-lg-4 col-sm-6">
+    <div class="col-md-2 col-xxl-2 col-lg-2 col-sm-6">
         <x-widget
             style="5"
-            link="{{ route('admin.hiring.jobDone') }}"
-            icon="las la-check-circle"
-            title="Job Done Hiring"
-            value="{{ $data['pending_hiring'] }}"
+            link="{{ route('admin.order.jobDone') }}"
+            icon="/assets/admin/images/Completed Deals.svg"
+            title="Completed Deals"
+            value="{{ $data['delivered_order'] }}"
             bg="2"
         />
     </div>
     <!-- dashboard-w1 end -->
-    <div class="col-xxl-2 col-lg-4 col-sm-6">
+    <div class="col-md-2 col-xxl-2 col-lg-2 col-sm-6">
         <x-widget
             style="5"
-            link="{{ route('admin.hiring.completed') }}"
-            icon="las la-check-double"
-            title="Completed Hiring"
-            value="{{ $data['completed_hiring'] }}"
+            link="{{ route('admin.order.completed') }}"
+            icon="/assets/admin/images/Successful Deals.svg"
+            title="Successful Deals"
+            value="{{ $data['completed_order'] }}"
             bg="3"
         />
     </div>
     <!-- dashboard-w1 end -->
-    <div class="col-xxl-2 col-lg-4 col-sm-6">
+    <div class=" col-md-2 col-xxl-2 col-lg-2 col-sm-6">
         <x-widget
             style="5"
-            link="{{ route('admin.hiring.reported') }}"
-            icon="las la-gavel"
-            title="Reported Hiring"
-            value="{{ $data['reported_hiring'] }}"
+            link="{{ route('admin.order.reported') }}"
+            icon="/assets/admin/images/Reported Deals.svg"
+            title="Reported Deals"
+            value="{{ $data['reported_order'] }}"
             bg="4"
         />
     </div>
     <!-- dashboard-w1 end -->
-    <div class="col-xxl-2 col-lg-4 col-sm-6">
+    <div class="col-md-2 col-xxl-2 col-lg-2 col-sm-6">
         <x-widget
             style="5"
-            link="{{ route('admin.hiring.cancelled') }}"
-            icon="las la-times"
-            title="Cancelled Hiring"
-            value="{{ $data['cancelled_hiring'] }}"
+            link="{{ route('admin.order.cancelled') }}"
+            icon="/assets/admin/images/Cancelled Deals.svg"
+            title="Cancelled Deals"
+            value="{{ $data['cancelled_order'] }}"
             bg="5"
         />
     </div>
     <!-- dashboard-w1 end -->
 </div>
+
+
 <!-- row end-->
 
 <div class="row mb-none-30 mt-30">

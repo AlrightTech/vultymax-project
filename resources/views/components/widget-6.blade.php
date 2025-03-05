@@ -12,8 +12,8 @@
 ])
 
 <a href="{{ $link }}">
-    <div class="widget-seven {{$class}} bg--{{ $bg }} @if($outline) outline @endif">
-        <div class="widget-seven__content ">
+    <div class="widget-seven {{$class}} bg--{{ $bg }} @if($outline) outline @endif py-4">
+        <div class="widget-seven__content">
             <span class="widget-seven__content-icon">
                 <span class="icon">
                     <img src="{{ $icon }}"></img>

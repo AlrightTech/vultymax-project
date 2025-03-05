@@ -7,9 +7,9 @@
     'class' => null
 ])
 
-<div class="widget-six bg--white p-3 rounded-2 box-shadow3  {{$class}}">
+<div class="widget-six bg--white p-2 rounded-2 box-shadow3  {{$class}}">
     <div class="widget-six__top">
-        <i class="{{ $icon }} bg--{{ $bg }} text--white b-radius--5"></i>
+                <img src="{{ asset($icon) }}" alt="icon" class="b-radius--5 border border-danger" style="width: 30px; height: 30px;">
         <p>{{ __($title) }}</p>
     </div>
     <div class="widget-six__bottom mt-3">
