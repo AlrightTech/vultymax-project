@@ -2,9 +2,9 @@
 @section('panel')
     <div class="row">
         <div class="col-lg-12">
-            <div class="card b-radius--10 ">
+            <div class="card b-radius--10 table-custom-bg-radius ">
                 <div class="card-body p-0">
-                    <div class="table-responsive--md table-responsive">
+                    <div class="table-responsive--md table-responsive table-custom-bg-radius borderr-table">
                         <table class="table table--light style--two">
                             <thead>
                                 <tr>
@@ -16,9 +16,9 @@
                             </thead>
                             <tbody>
                                 @forelse($categories as $category)
-                                    <tr>
-                                        <td >{{ $categories->firstItem() + $loop->index }}</td>
-                                        <td>{{ __($category->name) }}</td>
+                                    <tr class="table-cust-row-brdr1">
+                                        <td class="sn-nmbers">{{ $categories->firstItem() + $loop->index }}</td>
+                                        <td class="sn-nmbers">{{ __($category->name) }}</td>
                                         <td >
                                          @php
 

@@ -2,8 +2,8 @@
 @section('content')
 <form action="" class="d-flex flex-wrap justify-content-end ms-auto table--form mb-3">
     <div class="input-group">
-        <input type="text" name="search" class="form-control form--control" value="{{ request()->search }}" placeholder="@lang('Search here')">
-        <button class="input-group-text bg--base text-white border-0 px-4"><i class="las la-search"></i></button>
+        <input type="text" name="search" class="form-control form--control searchh-hiring" value="{{ request()->search }}" placeholder="@lang('Search here')">
+        <button class="input-group-text bg--base text-white border-0 px-4 searchh-hiring1"><i class="las la-search"></i></button>
     </div>
 </form>
 <table class="table--responsive--lg table">

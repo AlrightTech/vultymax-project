@@ -8,8 +8,8 @@
                         <button class="btn-close sidebar-close shadow-none d-xl-none"></button>
                         <div class="w-100 search-widget">
                             <div class="input-group">
-                                <input type="text" class="form-control form--control mySearch" placeholder="@lang('Search here')" value="{{ request()->search }}">
-                                <button class="input-group-text bg--base border--base border-0 searchBtn px-3 text-white" type="button"><i class="fas fa-search"></i></button>
+                                <input type="text" class="form-control form--control mySearch searchh-hiring" placeholder="@lang('Search here')" value="{{ request()->search }}">
+                                <button class="input-group-text bg--base border--base border-0 searchBtn px-3 text-white searchh-hiring1" type="button"><i class="fas fa-search"></i></button>
                             </div>
                         </div>
 

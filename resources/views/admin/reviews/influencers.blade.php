@@ -2,9 +2,9 @@
 @section('panel')
     <div class="row">
         <div class="col-lg-12">
-            <div class="card b-radius--10 ">
+            <div class="card table-custom-bg-radius ">
                 <div class="card-body p-0">
-                    <div class="table-responsive--md  table-responsive">
+                    <div class="table-responsive--md  table-responsive borderr-table">
                         <table class="table table--light style--two">
                             <thead>
                                 <tr>
@@ -19,36 +19,36 @@
                             <tbody>
                                 @forelse($reviews as $review)
                                     <tr>
-                                        <td >
-                                            <span class="fw-bold">
+                                        <td class="sponse-name">
+                                            <span >
                                                 <a href="{{ route('admin.hiring.detail', $review->hiring_id) }}">{{ @$review->hiring->hiring_no }}</a>
                                             </span>
                                         </td>
 
-                                        <td >
-                                            <span class="fw-bold">
+                                        <td>
+                                            <span class="sponse-name">
                                                 {{ __(@$review->user->fullname) }}<br>
                                                 <a href="{{ route('admin.users.detail', $review->user_id) }}">
-                                                    <span>@</span>{{ @$review->user->username }}
+                                                    <span class="small sponse-small">@</span>{{ @$review->user->username }}
                                                 </a>
                                             </span>
                                         </td>
 
-                                        <td >
-                                            <span class="fw-bold">
+                                        <td class="sponse-name">
+                                            <span class="sponse-name">
                                                 {{ __(@$review->influencer->fullname) }}<br>
-                                                <a href="{{ route('admin.influencers.detail', $review->influencer_id) }}">
-                                                    <span>@</span>{{ @$review->influencer->username }}
+                                                <a class="sponse-small" href="{{ route('admin.influencers.detail', $review->influencer_id) }}">
+                                                    <span class="sponse-small">@</span>{{ @$review->influencer->username }}
                                                 </a>
                                             </span>
                                         </td>
 
                                         <td >
-                                            <span>{{ $review->star }} @lang('star')</span>
+                                            <span class="sn-nmbers">{{ $review->star }} @lang('star')</span>
                                         </td>
 
                                         <td d>
-                                            <span>{{ showDateTime($review->created_at) }} <br> {{ diffForHumans($review->created_at) }}</span>
+                                            <span class="sn-nmbers">{{ showDateTime($review->created_at) }} <br> {{ diffForHumans($review->created_at) }}</span>
                                         </td>
 
                                         <td >
@@ -106,9 +106,9 @@
     <div class="d-flex flex-wrap justify-content-end">
         <form action="" method="GET" class="form-inline">
             <div class="input-group justify-content-end">
-                <input type="text" name="search" class="form-control bg--white" placeholder="@lang('Search here')"
+                <input type="text" name="search" class="form-control bg--white searchh-hiring" placeholder="@lang('Search here')"
                     value="{{ request()->search }}">
-                <button class="btn btn--primary input-group-text" type="submit"><i class="fa fa-search"></i></button>
+                <button class="btn btn--primary input-group-text searchh-hiring1" type="submit"><i class="fa fa-search"></i></button>
             </div>
         </form>
     </div>

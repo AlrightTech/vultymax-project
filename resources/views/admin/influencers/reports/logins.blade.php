@@ -4,10 +4,10 @@
     <div class="row">
 
         <div class="col-lg-12">
-            <div class="card b-radius--10 ">
+            <div class="card table-custom-bg-radius ">
                 <div class="card-body p-0">
 
-                    <div class="table-responsive--sm table-responsive">
+                    <div class="table-responsive--sm table-responsive borderr-table">
                         <table class="table table--light style--two">
                             <thead>
                             <tr>
@@ -23,21 +23,21 @@
                                 <tr>
 
                                 <td>
-                                        <span class="fw-bold">{{ @$log->influencer->fullname }}</span>
+                                        <span class="sponse-name">{{ @$log->influencer->fullname }}</span>
                                         <br>
-                                        <span class="small"> <a href="{{ route('admin.influencers.detail', $log->influencer_id) }}"><span>@</span>{{ @$log->influencer->username }}</a> </span>
+                                        <span class="small sponse-small"> <a href="{{ route('admin.influencers.detail', $log->influencer_id) }}"><span>@</span>{{ @$log->influencer->username }}</a> </span>
                                 </td>
-                                    <td>
+                                    <td class="sponse-name">
                                         {{showDateTime($log->created_at) }} <br> {{diffForHumans($log->created_at) }}
                                     </td>
-                                    <td >
-                                        <span class="fw-bold">
+                                    <td class="sponse-name">
+                                        <span class="small sponse-small">
                                         <a href="{{route('admin.influencer.report.login.ipHistory',[$log->user_ip])}}">{{ $log->user_ip }}</a>
                                         </span>
                                     </td>
 
-                                    <td >{{ __($log->city) }} <br> {{ __($log->country) }}</td>
-                                    <td>
+                                    <td class="sn-nmbers">{{ __($log->city) }} <br> {{ __($log->country) }}</td>
+                                    <td class="sn-nmbers">
                                         {{ __($log->browser) }} <br> {{ __($log->os) }}
                                     </td>
                                 </tr>
@@ -69,7 +69,7 @@
     @if(request()->routeIs('admin.report.login.history'))
     <form action="{{ route('admin.report.login.history') }}" method="GET" class="form-inline float-sm-end">
         <div class="input-group">
-            <input type="text" name="search" class="form-control bg--white" placeholder="@lang('Search Username')" value="{{ request()->search }}">
+            <input type="text" name="search" class="form-control bg--white " placeholder="@lang('Search Username')" value="{{ request()->search }}">
             <button class="btn btn--primary input-group-text" type="submit"><i class="fa fa-search"></i></button>
         </div>
     </form>

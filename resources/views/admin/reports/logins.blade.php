@@ -4,10 +4,10 @@
     <div class="row">
 
         <div class="col-lg-12">
-            <div class="card">
+            <div class="card table-custom-bg-radius">
                 <div class="card-body p-0">
 
-                    <div class="table-responsive--sm table-responsive">
+                    <div class="table-responsive--sm table-responsive borderr-table">
                         <table class="table table--light style--two">
                             <thead>
                             <tr>
@@ -22,27 +22,27 @@
                             @forelse($loginLogs as $log)
                                 <tr>
 
-                                <td>
-                                    <span class="fw-bold">{{ @$log->user->fullname }}</span>
+                                <td class="sponse-name">
+                                    <span class="sponse-name">{{ @$log->user->fullname }}</span>
                                     <br>
-                                    <span class="small"> <a href="{{ route('admin.users.detail', $log->user_id) }}"><span>@</span>{{ @$log->user->username }}</a> </span>
+                                    <span class="small sponse-small"> <a href="{{ route('admin.users.detail', $log->user_id) }}"><span>@</span>{{ @$log->user->username }}</a> </span>
                                 </td>
 
 
-                                    <td>
+                                    <td class="sn-nmbers">
                                         {{showDateTime($log->created_at) }} <br> {{diffForHumans($log->created_at) }}
                                     </td>
 
 
 
                                     <td>
-                                        <span class="fw-bold">
+                                        <span class="small sponse-small">
                                         <a href="{{route('admin.report.login.ipHistory',[$log->user_ip])}}">{{ $log->user_ip }}</a>
                                         </span>
                                     </td>
 
-                                    <td>{{ __($log->city) }} <br> {{ __($log->country) }}</td>
-                                    <td>
+                                    <td class="sn-nmbers">{{ __($log->city) }} <br> {{ __($log->country) }}</td>
+                                    <td class="sn-nmbers">
                                         {{ __($log->browser) }} <br> {{ __($log->os) }}
                                     </td>
                                 </tr>

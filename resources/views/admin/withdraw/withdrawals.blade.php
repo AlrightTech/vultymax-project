@@ -3,7 +3,7 @@
 @section('panel')
     <div class="row justify-content-center">
         @if (request()->routeIs('admin.withdraw.log') || request()->routeIs('admin.withdraw.method') || request()->routeIs('admin.users.withdrawals') || request()->routeIs('admin.users.withdrawals.method'))
-            <div class="col-xxl-4 col-sm-6">
+            <div class="col-xxl-4 col-sm-6 mb-2">
                 <x-widget
                     style="6"
                     link="{{ route('admin.withdraw.approved') }}"
@@ -13,7 +13,7 @@
                     bg="success"
                 />
             </div>
-            <div class="col-xxl-4 col-sm-6">
+            <div class="col-xxl-4 col-sm-6 mb-2">
                 <x-widget
                     style="6"
                     link="{{ route('admin.withdraw.pending') }}"
@@ -23,7 +23,7 @@
                     bg="warning"
                 />
             </div>
-            <div class="col-xxl-4 col-sm-6">
+            <div class="col-xxl-4 col-sm-6 mb-2">
                 <x-widget
                     style="6"
                     link="{{ route('admin.withdraw.rejected') }}"
@@ -35,10 +35,10 @@
             </div>
         @endif
         <div class="col-lg-12 mt-4">
-            <div class="card">
+            <div class="card table-custom-bg-radius">
                 <div class="card-body p-0">
 
-                    <div class="table-responsive--sm table-responsive">
+                    <div class="table-responsive--sm table-responsive borderr-table">
                         <table class="table table--light style--two">
                             <thead>
                                 <tr>
@@ -123,20 +123,19 @@
 
 
 
-
 @push('breadcrumb-plugins')
     <form action="" method="GET">
         <div class="form-inline float-sm-end mb-2 ms-0 ms-xl-2 ms-lg-0">
             <div class="input-group">
-                <input type="text" name="search" class="form-control bg--white" placeholder="@lang('Trx number/Username')" value="{{ request()->search }}">
-                <button class="btn btn--primary input-group-text" type="submit"><i class="fa fa-search"></i></button>
+                <input type="text" name="search" class="form-control bg--white searchh-hiring" placeholder="@lang('Trx number/Username')" value="{{ request()->search }}">
+                <button class="btn btn--primary input-group-text searchh-hiring1" type="submit"><i class="fa fa-search"></i></button>
             </div>
         </div>
         <div class="form-inline float-sm-end">
             <div class="input-group">
-                <input name="date" type="text" data-range="true" data-multiple-dates-separator=" - " data-language="en" class="datepicker-here form-control bg--white" data-position='bottom right' placeholder="@lang('Start Date - End date')" autocomplete="off" value="{{ request()->date }}">
+                <input name="date" type="text" data-range="true" data-multiple-dates-separator=" - " data-language="en" class="datepicker-here form-control bg--white searchh-hiring" data-position='bottom right' placeholder="@lang('Start Date - End date')" autocomplete="off" value="{{ request()->date }}">
                 <input type="hidden" name="method" value="{{ @$method->id }}">
-                <button class="btn btn--primary input-group-text" type="submit"><i class="fa fa-search"></i></button>
+                <button class="btn btn--primary input-group-text searchh-hiring1" type="submit"><i class="fa fa-search"></i></button>
             </div>
         </div>
     </form>

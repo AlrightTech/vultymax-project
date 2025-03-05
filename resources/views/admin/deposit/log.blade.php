@@ -10,9 +10,9 @@
     @endif
 
     <div class="col-md-12">
-        <div class="card">
+        <div class="card table-custom-bg-radius">
             <div class="card-body p-0">
-                <div class="table-responsive--sm table-responsive">
+                <div class="table-responsive--sm table-responsive borderr-table">
                     <table class="table table--light style--two">
                         <thead>
                         <tr>

@@ -7,25 +7,25 @@
         <div class="show-filter mb-3 text-end">
             <button type="button" class="btn btn-outline--primary showFilterBtn btn-sm"><i class="las la-filter"></i> @lang('Filter')</button>
         </div>
-        <div class="card responsive-filter-card mb-4">
+        <div class="card responsive-filter-card mb-4 table-custom-bg-radius" style="box-shadow: 0px 0px 5.95px 0px #00000014;">
             <div class="card-body">
                 <form>
                     <div class="d-flex flex-wrap gap-4">
                         <div class="flex-grow-1">
-                            <label>@lang('TRX/Username')</label>
-                            <input type="search" name="search" value="{{ request()->search }}" class="form-control">
+                            <label class="transactin-labels">@lang('TRX/Username')</label>
+                            <input type="search" name="search" value="{{ request()->search }}" class="form-control all-option-clr">
                         </div>
                         <div class="flex-grow-1">
-                            <label>@lang('Type')</label>
-                            <select name="trx_type" class="form-control select2" data-minimum-results-for-search="-1">
+                            <label class="transactin-labels">@lang('Type')</label>
+                            <select name="trx_type" class="form-control select2 all-option-clr" data-minimum-results-for-search="-1">
                                 <option value="">@lang('All')</option>
                                 <option value="+" @selected(request()->trx_type == '+')>@lang('Plus')</option>
                                 <option value="-" @selected(request()->trx_type == '-')>@lang('Minus')</option>
                             </select>
                         </div>
                         <div class="flex-grow-1">
-                            <label>@lang('Remark')</label>
-                            <select class="form-control select2" data-minimum-results-for-search="-1" name="remark">
+                            <label class="transactin-labels">@lang('Remark')</label>
+                            <select class="form-control select2 all-option-clr" data-minimum-results-for-search="-1" name="remark">
                                 <option value="">@lang('All')</option>
                                 @foreach($remarks as $remark)
                                 <option value="{{ $remark->remark }}" @selected(request()->remark == $remark->remark)>{{ __(keyToTitle($remark->remark)) }}</option>
@@ -33,19 +33,19 @@
                             </select>
                         </div>
                         <div class="flex-grow-1">
-                            <label>@lang('Date')</label>
-                            <input name="date" type="search" class="datepicker-here form-control bg--white pe-2 date-range" placeholder="@lang('Start Date - End Date')" autocomplete="off" value="{{ request()->date }}">
+                            <label class="transactin-labels">@lang('Date')</label>
+                            <input name="date" type="search" class="datepicker-here form-control bg--white pe-2 date-range all-option-clr" placeholder="@lang('Start Date - End Date')" autocomplete="off" value="{{ request()->date }}">
                         </div>
                         <div class="flex-grow-1 align-self-end">
-                            <button class="btn btn--primary w-100 h-45"><i class="fas fa-filter"></i> @lang('Filter')</button>
+                            <button class="btn btn--primary w-100 h-45" style="border-radius: 5px !important; height: 40px !important;"><i class="fas fa-filter"></i> @lang('Filter')</button>
                         </div>
                     </div>
                 </form>
             </div>
         </div>
-        <div class="card">
+        <div class="card table-custom-bg-radius">
             <div class="card-body p-0">
-                <div class="table-responsive--sm table-responsive">
+                <div class="table-responsive--sm table-responsive borderr-table">
                     <table class="table table--light style--two">
                         <thead>
                             <tr>

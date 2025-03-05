@@ -2,9 +2,9 @@
 @section('panel')
     <div class="row">
         <div class="col-lg-12">
-            <div class="card">
+            <div class="card table-custom-bg-radius">
                 <div class="card-body p-0">
-                    <div class="table-responsive--sm table-responsive">
+                    <div class="table-responsive--sm table-responsive borderr-table">
                         <table class="table table--light style--two">
                             <thead>
                             <tr>
@@ -18,28 +18,28 @@
                             <tbody>
                                 @forelse($logs as $log)
                                     <tr>
-                                        <td>
+                                        <td >
                                             @if($log->influencer)
-                                            <span class="fw-bold">{{ $log->influencer->fullname }}</span>
+                                            <span class="sponse-name">{{ $log->influencer->fullname }}</span>
                                                 <br>
-                                            <span class="small">
+                                            <span class="small sponse-small">
                                                 <a href="{{ route('admin.influencers.detail', $log->influencer_id) }}"><span>@</span>{{ $log->influencer->username }}</a>
                                             </span>
                                             @else
                                                 <span class="fw-bold">@lang('System')</span>
                                             @endif
                                         </td>
-                                        <td>
+                                        <td class="sn-nmbers">
                                             {{ showDateTime($log->created_at) }}
                                             <br>
                                             {{ $log->created_at->diffForHumans() }}
                                         </td>
                                         <td >
-                                            <span class="fw-bold">{{ __($log->sender) }}</span>
+                                            <span class="sponse-name">{{ __($log->sender) }}</span>
                                         </td>
-                                        <td>{{ __($log->subject) }}</td>
+                                        <td class="sn-nmbers">{{ __($log->subject) }}</td>
                                         <td >
-                                            <button class="btn btn-sm btn-outline--primary notifyDetail" data-type="{{ $log->notification_type }}" @if($log->notification_type == 'email') data-message="{{ route('admin.report.email.details',$log->id)}}" @else data-message="{{ $log->message }}" @endif data-sent_to="{{ $log->sent_to }}" target="_blank"><i class="las la-desktop"></i> @lang('Detail')</button>
+                                            <button class="btn btn-sm btn-outline--primary notifyDetail confirmationBtn detaill-txt" data-type="{{ $log->notification_type }}" @if($log->notification_type == 'email') data-message="{{ route('admin.report.email.details',$log->id)}}" @else data-message="{{ $log->message }}" @endif data-sent_to="{{ $log->sent_to }}" target="_blank"><i class="las la-desktop"></i> @lang('Detail')</button>
                                         </td>
                                     </tr>
                                 @empty
