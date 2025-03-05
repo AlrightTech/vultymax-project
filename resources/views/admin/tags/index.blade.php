@@ -2,9 +2,9 @@
 @section('panel')
     <div class="row">
         <div class="col-lg-12">
-            <div class="card b-radius--10 ">
+            <div class="card table-custom-bg-radius ">
                 <div class="card-body p-0">
-                    <div class="table-responsive--md  table-responsive">
+                    <div class="table-responsive--md  table-responsive table-custom-bg-radius borderr-table">
                         <table class="table table--light style--two">
                             <thead>
                                 <tr>
@@ -16,7 +16,7 @@
                                 @forelse($tags as $tag)
                                 <tr>
                                     <td>
-                                        <span class="fw-bold">{{__($tag->name)}}</span>
+                                        <span class="sn-nmbers">{{__($tag->name)}}</span>
                                     </td>
                                     <td>
                                         <button class="btn btn-sm btn-outline--primary editButton" data-id="{{ $tag->id }}" data-name="{{ $tag->name }}">

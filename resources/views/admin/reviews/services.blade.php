@@ -2,9 +2,9 @@
 @section('panel')
     <div class="row">
         <div class="col-lg-12">
-            <div class="card b-radius--10 ">
+            <div class="card table-custom-bg-radius ">
                 <div class="card-body p-0">
-                    <div class="table-responsive--md  table-responsive">
+                    <div class="table-responsive--md  table-responsive borderr-table">
                         <table class="table table--light style--two">
                             <thead>
                                 <tr>
@@ -114,9 +114,9 @@
     <div class="d-flex flex-wrap justify-content-end">
         <form action="" method="GET" class="form-inline">
             <div class="input-group justify-content-end">
-                <input type="text" name="search" class="form-control bg--white" placeholder="@lang('Search here')"
+                <input type="text" name="search" class="form-control bg--white searchh-hiring" placeholder="@lang('Search here')"
                     value="{{ request()->search }}">
-                <button class="btn btn--primary input-group-text" type="submit"><i class="fa fa-search"></i></button>
+                <button class="btn btn--primary input-group-text searchh-hiring1" type="submit"><i class="fa fa-search"></i></button>
             </div>
         </form>
     </div>

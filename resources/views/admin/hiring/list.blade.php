@@ -2,9 +2,9 @@
 @section('panel')
     <div class="row">
         <div class="col-lg-12">
-            <div class="card b-radius--10 ">
+            <div class="card table-custom-bg-radius ">
                 <div class="card-body p-0">
-                    <div class="table-responsive--md  table-responsive">
+                    <div class="table-responsive--md  table-responsive borderr-table">
                         <table class="table table--light style--two">
                             <thead>
                             <tr>
@@ -23,11 +23,11 @@
                                 @forelse($hirings as $hiring)
                                 <tr>
                                     <td >
-                                        <span class="fw-bold">{{ $hiring->hiring_no }}</span>
+                                        <span class="sponse-name">{{ $hiring->hiring_no }}</span>
                                     </td>
 
                                     <td >
-                                        <span class="small">
+                                        <span class="small sponse-small">
                                             <a href="{{ route('admin.users.detail', $hiring->user_id) }}"><span>@</span>{{ @$hiring->user->username }}</a>
                                         </span>
                                     </td>
@@ -82,8 +82,8 @@
     <div class="d-flex flex-wrap justify-content-end">
         <form action="" method="GET" class="form-inline">
             <div class="input-group justify-content-end">
-                <input type="text" name="search" class="form-control bg--white" placeholder="@lang('Search influencer or category')" value="{{ request()->search }}">
-                <button class="btn btn--primary input-group-text" type="submit"><i class="fa fa-search"></i></button>
+                <input type="text" name="search" class="form-control bg--white searchh-hiring" placeholder="@lang('Search influencer or category')" value="{{ request()->search }}">
+                <button class="btn input-group-text searchh-hiring1" type="submit"><i class="fa fa-search"></i></button>
             </div>
         </form>
     </div>

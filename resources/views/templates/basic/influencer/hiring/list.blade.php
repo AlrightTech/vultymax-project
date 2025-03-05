@@ -17,8 +17,8 @@
 
         <form action="" class="ms-auto service-search-form">
             <div class="input-group">
-                <input type="text" name="search" class="form-control form--control" value="{{ request()->search }}" placeholder="@lang('Search here')">
-                <button class="input-group-text bg--base border-0 text-white px-4">
+                <input type="text" name="search" class="form-control form--control searchh-hiring" value="{{ request()->search }}" placeholder="@lang('Search here')">
+                <button class="input-group-text bg--base border-0 text-white px-4 searchh-hiring1">
                     <i class="las la-search"></i>
                 </button>
             </div>

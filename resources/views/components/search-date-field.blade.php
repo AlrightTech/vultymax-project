@@ -1,6 +1,8 @@
 <div class="input-group w-auto flex-fill">
-    <input name="date" type="search" class="datepicker-here form-control bg--white pe-2 date-range" placeholder="@lang('Start Date - End Date')" autocomplete="off" value="{{ request()->date }}">
-    <button class="btn btn--primary input-group-text"><i class="la la-search"></i></button>
+    <input name="date" type="search" class="datepicker-here form-control bg--white pe-2 date-range searchh-hiring" placeholder="@lang('Start Date - End Date')" autocomplete="off" value="{{ request()->date }}">
+    {{-- <button class="btn btn--primary input-group-text searchh-hiring1"><i class="la la-search"></i></button> --}}
+    <button class="btn btn--primary input-group-text searchh-hiring1" type="submit"><i class="fa fa-search fs-6"></i></button>
+
 </div>
 
 @push('script-lib')

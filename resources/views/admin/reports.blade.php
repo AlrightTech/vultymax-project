@@ -2,9 +2,9 @@
 @section('panel')
 <div class="row mb-none-30">
   <div class="col-md-12">
-    <div class="card">
+    <div class="card table-custom-bg-radius">
       <div class="card-body p-0">
-        <div class="table-responsive--md  table-responsive">
+        <div class="table-responsive--md  table-responsive borderr-table">
           <table class="table table--light style--two">
             <thead>
               <tr>

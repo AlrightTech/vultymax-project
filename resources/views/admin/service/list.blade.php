@@ -4,7 +4,7 @@
         <div class="col-lg-12">
             <div class="card b-radius--10 ">
                 <div class="card-body p-0">
-                    <div class="table-responsive--md  table-responsive">
+                    <div class="table-responsive--md  table-responsive borderr-table">
                         <table class="table table--light style--two">
                             <thead>
                                 <tr>
@@ -22,24 +22,24 @@
                                 @forelse($services as $service)
                                 <tr>
                                     <td>
-                                        <span class="fw-bold">{{@$service->influencer->fullname}}</span>
+                                        <span class="sponse-name">{{@$service->influencer->fullname}}</span>
                                         <br>
-                                        <span class="small">
+                                        <span class="small sponse-small">
                                         <a href="{{ route('admin.influencers.detail', @$service->influencer->id) }}"><span>@</span>{{ @$service->influencer->username }}</a>
                                         </span>
                                     </td>
 
                                     <td >
-                                        <span class="fw-bold">{{__(@$service->category->name)}}</span>
+                                        <span class="sn-nmbers">{{__(@$service->category->name)}}</span>
                                     </td>
 
                                     <td>
-                                        <span>{{ __(strLimit($service->title,40)) }}</span>
+                                        <span class="sn-nmbers">{{ __(strLimit($service->title,40)) }}</span>
                                     </td>
 
                                     <td >
-                                        <span> @lang('Total') : {{ getAmount($service->total_order_count) }}</span><br>
-                                        <span> @lang('Done') : {{ getAmount($service->complete_order_count) }}</span><br>
+                                        <span class="sn-nmbers"> @lang('Total') : {{ getAmount($service->total_order_count) }}</span><br>
+                                        <span class="sn-nmbers"> @lang('Done') : {{ getAmount($service->complete_order_count) }}</span><br>
                                     </td>
 
                                     @if(request()->routeIs('admin.service.index'))
@@ -49,7 +49,7 @@
                                     @endif
 
                                     <td >
-                                        <a href="{{ route('admin.service.detail', $service->id) }}" class="btn btn-sm btn-outline--primary">
+                                        <a href="{{ route('admin.service.detail', $service->id) }}" class="btn btn-sm btn-outline--primary confirmationBtn detaill-txt">
                                             <i class="las la-desktop"></i>@lang('Details')
                                         </a>
                                     </td>
