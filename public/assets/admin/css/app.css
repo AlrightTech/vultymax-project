@@ -3002,7 +3002,7 @@ a {
 
 .card {
   border: none;
-  box-shadow: 0 0.75rem 1.5rem rgba(18, 38, 63, 0.03);
+  /* box-shadow: 0 0.75rem 1.5rem rgba(18, 38, 63, 0.03); */
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -4408,6 +4408,7 @@ th.w-85 {
 .widget-six .widget-six__top p {
   width: calc(100% - 40px);
   padding-left: 15px;
+  font-size: 11px;
 }
 
 .widget-six .widget-six__bottom {
@@ -4715,12 +4716,12 @@ th.w-85 {
 
 .widget-card-wrapper .widget-card-amount,
 .widget-card-inner .widget-card-amount {
-  font-size: 16px;
+  font-size: 13px;
 }
 
 .widget-card-wrapper .widget-card-title,
 .widget-card-inner .widget-card-title {
-  font-size: 14px;
+  font-size: 11px;
   font-weight: 300;
 }
 
