@@ -9,7 +9,7 @@
             </button>
         </div>
     </form>
-    <table class="table--responsive--lg table">
+    <table class="table--responsive--lg table ">
         <thead>
             <tr>
                 <th>@lang('Gateway | Transaction')</th>
