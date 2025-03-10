@@ -6,7 +6,7 @@
         <button class="input-group-text bg--base text-white border-0 px-4"><i class="las la-search"></i></button>
     </div>
 </form>
-<table class="table--responsive--lg table">
+<table class="table--responsive--lg table ">
     <thead>
         <tr>
             <th>@lang('Hiring Number')</th>

@@ -284,7 +284,7 @@
                                 <div class="form-group ">
                                     <label>@lang('Address')</label>
                                     <input class="form-control" type="text" name="address"
-                                        value="{{ @$influencer->address }}">
+                                        value="{{ $influencer?->address?->address }}">
                                 </div>
                             </div>
 
