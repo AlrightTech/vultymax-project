@@ -15,7 +15,7 @@ class ManageHiringController extends Controller
 
     public function index()
     {
-        $pageTitle = 'All Hiring';
+        $pageTitle = 'All Sponsorship Acquisitions';
         $hirings = $this->filterHiring();
         return view('admin.hiring.list', compact('pageTitle', 'hirings'));
     }
@@ -66,7 +66,7 @@ class ManageHiringController extends Controller
     protected function filterHiring($scope = null)
     {
         $hirings = Hiring::paymentCompleted();
-        
+
         if ($scope) {
             $hirings = Hiring::$scope();
         } else {
@@ -86,7 +86,7 @@ class ManageHiringController extends Controller
 
     public function takeAction($id, $status)
     {
-   
+
         $hiring = Hiring::with('user', 'influencer')->findOrFail($id);
 
         if ($status == Status::HIRING_COMPLETED) {

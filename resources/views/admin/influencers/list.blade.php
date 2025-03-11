@@ -8,7 +8,7 @@
                         <table class="table table--light style--two">
                             <thead>
                                 <tr>
-                                    <th>@lang('Influencer')</th>
+                                    <th>@lang('Influencers')</th>
                                     <th>@lang('Email-Phone')</th>
                                     <th>@lang('Country')</th>
                                     <th>@lang('Joined At')</th>

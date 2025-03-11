@@ -15,7 +15,7 @@ class ManageOrderController extends Controller
 
     public function index()
     {
-        $pageTitle = 'All Sponsorship Acquisitions';
+        $pageTitle = 'All Sponsorship Deals';
         $orders = $this->filterOrder();
         return view('admin.order.list', compact('pageTitle', 'orders'));
     }
