@@ -2189,7 +2189,7 @@ input:-webkit-autofill {
 }
 
 .banner-content p {
-	color: hsl(var(--white));
+	color: #ffffff;
 	font-size: 22px;
 	margin: 25px 0 50px;
 	font-weight: 300;
@@ -4308,7 +4308,7 @@ label.required:after {
 
 .login-btn:hover {
 	background-color: rgb(var(--base));
-	color: hsl(var(--white)) !important;
+	color: #ffffff !important;
 }
 
 .account-tab-nav {
