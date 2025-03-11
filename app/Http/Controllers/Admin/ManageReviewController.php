@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 
 class ManageReviewController extends Controller {
     public function services(Request $request) {
-        $pageTitle = 'Service Review List';
+        $pageTitle = 'Service Reviews List';
         $reviews   = Review::searchable(['order:order_no','user:username', 'influencer:username' ])->where('order_id', '!=', 0)->latest()->with('user', 'service', 'order', 'influencer')->latest()->paginate(getPaginate());
         return view('admin.reviews.services', compact('pageTitle', 'reviews'));
     }
@@ -66,5 +66,5 @@ class ManageReviewController extends Controller {
         $notify[] = ['success', 'Review removed successfully'];
         return back()->withNotify($notify);
     }
-    
+
 }

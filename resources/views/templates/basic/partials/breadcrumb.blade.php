@@ -13,10 +13,16 @@
 @if(!in_array($currentRouteName, $routes))
 
     <section class="inner-banner bg_img position-relative" style="background: url('{{ getImage('assets/images/frontend/breadcrumb/'.$uri.'.png','1920x250') }}') center;">
-        <div class="container"> 
+        <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-7 col-xl-6 text-center">
-                    <h3 class="title text-white">{{ __($pageTitle) }}</h3>
+                    <h3 class="title text-white">
+                        @if($pageTitle=="FAQ")
+                        Frequently Asked Questions
+
+                        @else
+                        {{ __($pageTitle) }}</h3>
+                        @endif
                 </div>
             </div>
         </div>

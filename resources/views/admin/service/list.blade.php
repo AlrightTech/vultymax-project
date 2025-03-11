@@ -8,10 +8,10 @@
                         <table class="table table--light style--two">
                             <thead>
                                 <tr>
-                                    <th>@lang('Influencer')</th>
+                                    <th>@lang('Influencers')</th>
                                     <th>@lang('Category')</th>
                                     <th>@lang('Title')</th>
-                                    <th>@lang('Order')</th>
+                                    <th>@lang('Sponsorship Deals')</th>
                                     @if(request()->routeIs('admin.service.index'))
                                     <th>@lang('Status')</th>
                                     @endif
