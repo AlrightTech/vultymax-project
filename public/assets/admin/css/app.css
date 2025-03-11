@@ -423,15 +423,18 @@ a {
 
 /* color css end */
 /* background-color css start */
-*[class*='bg'] {
+/* *[class*='bg'] {
     color: #ffffff;
-}
+} */
 
 .bg--white,
 .bg--gray {
     color: inherit;
 }
+.register-url {
+    color: #FF1618;
 
+}
 .bg--primary {
     --color: #333333;
     background-color: var(--color) !important;
@@ -6632,7 +6635,8 @@ th.w-85 {
 }
 
 .login-form .forget-text:hover {
-    color: #fff;
+    /* color: #fff; */
+    color: #3c5282;
 }
 
 .login-placehold::placeholder {

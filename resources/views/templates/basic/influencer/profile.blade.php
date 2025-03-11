@@ -41,8 +41,9 @@
                     </div>
                     @if (!authInfluencerId())
                     <div class="right buttons-wrapper">
-                        <a href="{{ route('user.hiring.request', [slug($influencer->username), $influencer->id]) }}" class="btn btn--outline-base btn--sm radius-0"><i class="fas fa-user-check"></i>
-                            @lang('Hire Me Now')</a>
+                        <a href="{{ route('user.hiring.request', [slug($influencer->username), $influencer->id]) }}" class="btn btn--outline-base btn--sm radius-0">
+                            {{-- <i class="fas fa-user-check"></i> --}}
+                            @lang('Sponsor Me Now')</a>
 
                         <a href="{{ route('user.conversation.create', $influencer->id) }}" class="btn btn--outline-info btn--sm radius-0"><i class="fas fa-sms"></i> @lang('Contact')</a>
                     </div>

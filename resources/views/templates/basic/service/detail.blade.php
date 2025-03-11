@@ -208,7 +208,7 @@ $content = getContent('top_influencer.content', true);
                             </ul>
                             @if(!authInfluencerId())
                             <a href="{{ route('user.order.form', $service->id) }}" class="btn btn--outline-base btn--md w-100">
-                                @lang('Order Now')
+                                @lang('Sponsor Me ')
                             </a>
                             @endif
                         </div>

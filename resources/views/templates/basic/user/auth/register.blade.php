@@ -24,7 +24,7 @@
                                     <h3 class="this-page-title">{{ __(@$register->data_values->title) }}</h3>
                                 </div>
                                 <div class="account-content-right">
-                                    <button class="btn btn--md btn--outline-base actionBtn active" data-type="client" data-influencer="false" type="button">@lang('Client')</button>
+                                    <button class="btn btn--md btn--outline-base actionBtn active" data-type="client" data-influencer="false" type="button">@lang('Brand')</button>
                                     <button class="btn btn--md btn--outline-base actionBtn" data-type="influencer" data-influencer="true" type="button">@lang('Influencer')</button>
                                 </div>
                             </div>
@@ -86,7 +86,7 @@
                             </form>
                             <div class="text-center">
                                 <p class="mt-3">@lang('Have an account? ')
-                                    <a class="text--base login-url" href="{{ route('user.login') }}">@lang('Login here')</a>
+                                    <a class="text--base login-url"  href="{{ route('user.login') }}" style="color: #FF1618 !important;">@lang('Login here')</a>
                                 </p>
                             </div>
                         </div>
