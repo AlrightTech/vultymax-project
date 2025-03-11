@@ -8,8 +8,15 @@
                     <div class="row">
                         <div class="col-md-12 col-sm-12">
                             <div class="form-group position-relative mb-0">
-                                <div class="system-search-icon"><i class="las la-search"></i></div>
-                                <input class="form-control searchInput" type="search" placeholder="@lang('Search')...">
+                                <div class="system-search-icon">
+                                    {{-- <i class="las la-search"></i> --}}
+                                    <svg width="12" height="13" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.4204 12.3296L10.5646 9.47381C11.1546 8.5845 11.5 7.51969 11.5 6.375C11.5 3.27338 8.97663 0.75 5.875 0.75C2.77338 0.75 0.25 3.27338 0.25 6.375C0.25 9.47663 2.77338 12 5.875 12C7.01969 12 8.0845 11.6546 8.97381 11.0646L11.8296 13.9204C12.2684 14.3597 12.9816 14.3597 13.4204 13.9204C13.8597 13.4811 13.8597 12.7689 13.4204 12.3296ZM1.9375 6.375C1.9375 4.20375 3.70375 2.4375 5.875 2.4375C8.04625 2.4375 9.8125 4.20375 9.8125 6.375C9.8125 8.54625 8.04625 10.3125 5.875 10.3125C3.70375 10.3125 1.9375 8.54625 1.9375 6.375Z" fill="#6B7384"/>
+                                    </svg>
+                                </div>
+                                <input class="form-control searchInput" type="search" placeholder="@lang('Search here')">
+
+                                {{-- <input class="form-control searchInput" type="search" placeholder="@lang('Search')..."> --}}
                             </div>
                         </div>
                     </div>

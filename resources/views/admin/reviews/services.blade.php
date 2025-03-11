@@ -8,12 +8,12 @@
                         <table class="table table--light style--two">
                             <thead>
                                 <tr>
-                                    <th>@lang('Order Number')</th>
+                                    <th>@lang('Sponsorship ID')</th>
                                     <th>@lang('Reviewer')</th>
                                     <th>@lang('Influencer')</th>
                                     <th>@lang('Service')</th>
                                     <th>@lang('Rating')</th>
-                                    <th>@lang('Created At')</th>
+                                    <th>@lang('Initiated')</th>
                                     <th>@lang('Action')</th>
                                 </tr>
                             </thead>

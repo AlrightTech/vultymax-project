@@ -15,7 +15,7 @@ class ManageOrderController extends Controller
 
     public function index()
     {
-        $pageTitle = 'All Orders';
+        $pageTitle = 'All Sponsorship Acquisitions';
         $orders = $this->filterOrder();
         return view('admin.order.list', compact('pageTitle', 'orders'));
     }
@@ -74,7 +74,7 @@ class ManageOrderController extends Controller
 
         return $orders->searchable(['influencer:username', 'user:username','order_no'])->paymentCompleted()->with('user', 'influencer')->latest()->orderBy('id', 'desc')->paginate(getPaginate());
     }
-    
+
 
 
     public function detail($id)

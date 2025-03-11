@@ -398,7 +398,7 @@
         ]
     },
     "manage_hiring": {
-        "title": "Manage Hiring",
+        "title": "Manage Acquisition",
         "icon": "\\assets\\admin\\images\\Manage hiring.svg",
         "counters": ["pendingHiringCount", "reportedHiringCount"],
         "menu_active": "admin.hiring*",
