@@ -316,7 +316,7 @@
                 </div>
             </div>
 
-            <div class="card custom--card mt-5">
+            {{-- <div class="card custom--card mt-5">
                 <div class="card-header d-flex justify-content-between align-items-center flex-wrap border-none">
                     <h6 class="card-title">@lang('Education')</h6>
                     <button type="button" class="btn btn--outline-base btn--sm educationBtn"> <i class="la la-plus"></i>
@@ -401,7 +401,7 @@
                         </div>
                     @endforelse
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
 

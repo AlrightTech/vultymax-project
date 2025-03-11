@@ -19,7 +19,7 @@ $kycContent = getContent('client_kyc.content', true);
 @endif
 
 <div class="row justify-content-center gy-4">
-    <div class="col-xxl-4 col-md-6 col-sm-10">
+    <div class="col-xxl-4 col-md-4 col-sm-12">
         <div class="dashboard-widget widget--base">
             <div class="dashboard-widget__icon">
                 <i class="las la-money-check"></i>
@@ -30,7 +30,7 @@ $kycContent = getContent('client_kyc.content', true);
             </div>
         </div>
     </div>
-    <div class="col-xxl-4 col-md-6 col-sm-10">
+    <div class="col-xxl-4 col-md-4 col-sm-12">
         <div class="dashboard-widget widget--primary">
             <div class="dashboard-widget__icon">
                 <i class="las la-wallet"></i>
@@ -41,10 +41,10 @@ $kycContent = getContent('client_kyc.content', true);
             </div>
         </div>
     </div>
-    <div class="col-xxl-4 col-md-6 col-sm-10">
+    <div class="col-xxl-4 col-md-4 col-sm-12">
         <div class="dashboard-widget widget--secondary">
             <div class="dashboard-widget__icon">
-                <i class="las la-exchange-alt"></i>
+                <i class="las la-exchange-alt text-primary"></i>
             </div>
             <div class="dashboard-widget__content">
                 <a href="{{ route('user.transactions') }}"> <p>@lang('Total Transactions')</p></a>
@@ -52,35 +52,35 @@ $kycContent = getContent('client_kyc.content', true);
             </div>
         </div>
     </div>
-    <div class="col-xxl-4 col-md-6 col-sm-10">
+    <div class="col-xxl-4 col-md-4 col-sm-12">
         <div class="dashboard-widget widget--info">
             <div class="dashboard-widget__icon">
-                <i class="las la-list"></i>
+                <i class="las la-list" style="color: rgba(214, 36, 159, 1)"></i>
             </div>
             <div class="dashboard-widget__content">
-               <a href="{{ route('user.order.all') }}"><p>@lang('Total Order')</p></a>
+               <a href="{{ route('user.order.all') }}"><p>Total Partnerships</p></a>
                 <h4 class="title">{{ $data['total_order'] }}</h4>
             </div>
         </div>
     </div>
-    <div class="col-xxl-4 col-md-6 col-sm-10">
+    <div class="col-xxl-4 col-md-4 col-sm-12">
         <div class="dashboard-widget widget--success">
             <div class="dashboard-widget__icon">
                 <i class="lar la-list-alt"></i>
             </div>
             <div class="dashboard-widget__content">
-               <a href="{{ route('user.order.complete') }}"> <p>@lang('Completed Order')</p></a>
+               <a href="{{ route('user.order.complete') }}"> <p>Secured Partnerships</p></a>
                 <h4 class="title">{{ $data['complete_order'] }}</h4>
             </div>
         </div>
     </div>
-    <div class="col-xxl-4 col-md-6 col-sm-10">
+    <div class="col-xxl-4 col-md-4 col-sm-12">
         <div class="dashboard-widget widget--danger">
             <div class="dashboard-widget__icon">
                 <i class="las la-times"></i>
             </div>
             <div class="dashboard-widget__content">
-              <a href="{{ route('user.order.incomplete') }}"> <p>@lang('Incompleted Order')</p></a>
+              <a href="{{ route('user.order.incomplete') }}"> <p>Pending Partnerships</p></a>
                 <h4 class="title">{{ $data['incomplete_order'] }}</h4>
             </div>
         </div>
@@ -88,7 +88,7 @@ $kycContent = getContent('client_kyc.content', true);
 </div>
 <div class="mt-4">
     <h5 class="mb-3">@lang('Latest Transactions')</h5>
-    <table class="table table--responsive--lg">
+    <table class="table table--responsive--lg rounded-pill">
         <thead>
             <tr>
                 <th>@lang('Trx')</th>

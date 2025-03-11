@@ -32,8 +32,8 @@
             <thead>
                 <tr>
                     <th>@lang('Hiring Number')</th>
-                    <th>@lang('Client/Username')</th>
-                    <th class="text-center">@lang('Amount | Delivery')</th>
+                    <th>Brand/Username</th>
+                    <th class="text-center">Sponsorships</th>
                     @if (request()->routeIs('influencer.hiring.index'))
                     <th>@lang('Status')</th>
                     @endif

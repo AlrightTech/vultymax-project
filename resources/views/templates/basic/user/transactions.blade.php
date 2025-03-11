@@ -37,7 +37,7 @@
             </form>
         </div>
     </div>
-    <table class="table table--responsive--lg">
+    <table class="table table--responsive--lg rounded-pill">
         <thead>
             <tr>
                 <th>@lang('Trx')</th>
