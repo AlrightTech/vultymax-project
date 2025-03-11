@@ -9,7 +9,7 @@
 <table class="table--responsive--lg table ">
     <thead>
         <tr>
-            <th>@lang('Hiring Number')</th>
+            <th>Sponsorship ID</th>
             <th>@lang('Influencer')</th>
             <th class="text-center">@lang('Amount | Delivery')</th>
             <th>@lang('Status')</th>

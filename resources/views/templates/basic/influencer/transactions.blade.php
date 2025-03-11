@@ -38,7 +38,7 @@
             </form>
         </div>
     </div>
-    <table class="table table--responsive--lg">
+    <table class="table table--responsive--lg rounded-pill">
         <thead>
             <tr>
                 <th>@lang('Trx')</th>
@@ -61,12 +61,12 @@
 
                     <td  class="budget">
                         <span class="fw-bold @if ($trx->trx_type == '+') text--success @else text--danger @endif">
-                            {{ $trx->trx_type }} {{ showAmount($trx->amount) }} 
+                            {{ $trx->trx_type }} {{ showAmount($trx->amount) }}
                         </span>
                     </td>
 
                     <td  class="budget">
-                        {{ showAmount($trx->post_balance) }} 
+                        {{ showAmount($trx->post_balance) }}
                     </td>
 
 

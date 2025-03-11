@@ -10,9 +10,9 @@
                     </div>
 
                     <div class="card-body">
-                        <h6 class="mb-3">
+                        <p class="mb-3 text-center">
                             @lang('Use the QR code or setup key on your Google Authenticator app to add your account. ')
-                        </h6>
+                        </p>
 
                         <div class="form-group mx-auto text-center">
                             <img class="mx-auto" src="{{ $qrCodeUrl }}">
@@ -27,7 +27,7 @@
                         </div>
 
                         <label><i class="fa fa-info-circle"></i> @lang('Help')</label>
-                        <p>@lang('Google Authenticator is a multifactor app for mobile devices. It generates timed codes used during the 2-step verification process. To use Google Authenticator, install the Google Authenticator application on your mobile device.') <a class="text--base" href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en" target="_blank">@lang('Download')</a></p>
+                        <p>@lang('Google Authenticator is a multifactor app for mobile devices. It generates timed codes used during the 2-step verification process. To use Google Authenticator, install the Google Authenticator application on your mobile device.') <a class="text-success" href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en" target="_blank">@lang('Download')</a></p>
                     </div>
                 </div>
             </div>

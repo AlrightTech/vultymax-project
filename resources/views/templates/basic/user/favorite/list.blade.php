@@ -6,13 +6,13 @@
         <button class="input-group-text bg--base text-white border-0 px-4"><i class="las la-search"></i></button>
     </div>
 </form>
-<table class="table table--responsive--lg">
+<table class="table table--responsive--lg rounded-pill">
     <thead>
         <tr>
-            <th>@lang('Influencer')</th>
-            <th>@lang('Rating')</th>
-            <th class="text-center">@lang('Completed Order')</th>
-            <th>@lang('Joined At')</th>
+            <th>Sponsorship ID</th>
+            <th>Sponsee</th>
+            <th class="text-center">Amount | Delivery</th>
+            <th>Status</th>
             <th>@lang('Action')</th>
         </tr>
     </thead>

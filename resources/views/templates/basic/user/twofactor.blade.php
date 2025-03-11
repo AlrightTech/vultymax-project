@@ -9,9 +9,9 @@
                     </div>
 
                     <div class="card-body">
-                        <h6 class="mb-3">
+                        <p class="mb-3 text-center">
                             @lang('Use the QR code or setup key on your Google Authenticator app to add your account. ')
-                        </h6>
+                        </p>
 
                         <div class="form-group mx-auto text-center">
                             <img class="mx-auto" src="{{ $qrCodeUrl }}">

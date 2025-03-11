@@ -30,7 +30,7 @@
                     <textarea id="message" name="message" class="form-control form--control" required>{{ old('message') }}</textarea>
                 </div>
                 <div class="form-group col-md-12">
-                    <button type="button" class="btn btn--base btn--sm addAttachment my-2"> <i class="fas fa-plus"></i>
+                    <button type="button" class="btn btn--base btn--sm addAttachment my-2 bg-transparent"> <i class="fas fa-plus"></i>
                         @lang('Add Attachment') </button>
                     <p class="mb-2"><span class="text--info">@lang('Max 5 files can be uploaded | Maximum upload size is ' . convertToReadableSize(ini_get('upload_max_filesize')) . ' | Allowed File Extensions: .jpg, .jpeg, .png, .pdf, .doc, .docx')</span></p>
                     <div class="row fileUploadsContainer">

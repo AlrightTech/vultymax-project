@@ -9,7 +9,7 @@
                     <button class="input-group-text bg--base text-white border-0 px-4"><i class="las la-search"></i></button>
                 </div>
             </form>
-            <table class="table table--responsive--lg">
+            <table class="table table--responsive--lg rounded-pill">
                 <thead>
                     <tr>
                         <th>@lang('Influencer')</th>
@@ -20,7 +20,7 @@
                 </thead>
                 <tbody>
                     @forelse($conversations as $conversation)
-                   
+
                         <tr>
                             <td >
                                 <div>
@@ -29,15 +29,15 @@
                                     <small> {{ __(@$conversation->influencer->username) }} </small>
                                 </div>
                             </td>
-    
+
                             <td >
                                 <span>{{ strLimit(@$conversation->lastMessage->message,30) }}</span>
                             </td>
-    
+
                             <td>
                                 {{ showDateTime(@$conversation->lastMessage->created_at) }}<br>{{ diffForHumans(@$conversation->lastMessage->created_at) }}
                             </td>
-    
+
                             <td>
                                 <a href="{{ route('user.conversation.view',$conversation->id) }}" class="btn btn--sm btn--outline-base">
                                     <i class="las la-sms"></i> @lang('Chat')
