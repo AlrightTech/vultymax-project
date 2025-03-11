@@ -21,7 +21,7 @@
                                     <h3 class="this-page-title">{{ __(@$login->data_values->title) }}</h3>
                                 </div>
                                 <div class="account-content-right">
-                                    <button type="button" class="btn btn--md btn--outline-base actionBtn active" data-type="client">@lang('Client')</button>
+                                    <button type="button" class="btn btn--md btn--outline-base actionBtn active" data-type="client">@lang('Brand')</button>
                                     <button type="button" class="btn btn--md btn--outline-base actionBtn" data-type="influencer">@lang('Influencer')</button>
                                 </div>
                             </div>
@@ -29,7 +29,7 @@
                             <form method="POST" action="{{ route('user.login') }}" class="account-form verify-gcaptcha">
                                 @csrf
                                 <div class="form-group">
-                                    <label class="form-label">@lang('Username or Email') </label>
+                                    <label class="form-label">@lang('Email Address') </label>
                                     <input type="text" name="username" value="{{ old('username') }}" class="form-control form--control" required autocomplete="off">
                                 </div>
 
@@ -47,13 +47,13 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <a class="text--base forgot-url" href="{{ route('user.password.request') }}">@lang('Forgot Password?')</a>
+                                    <a class=" forgot-url" href="{{ route('user.password.request') }}">@lang('Forget Password?')</a>
                                 </div>
                                 <button type="submit" id="recaptcha" class="btn btn--base w-100">@lang('Submit')</button>
                             </form>
                             <div class="text-center">
                                 <p class="mt-4">@lang('Don\'t have an account?')
-                                    <a href="{{ route('user.register') }}" class="text--base register-url storageClear">@lang('Create an account')</a>
+                                    <a href="{{ route('user.register') }}" class=" register-url storageClear" style="color: #FF1618;">@lang('Create an account')</a>
                                 </p>
                             </div>
                         </div>

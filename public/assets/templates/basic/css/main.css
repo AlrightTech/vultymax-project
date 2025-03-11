@@ -1363,6 +1363,8 @@ input:-webkit-autofill {
 
 .forgot-url {
 	font-size: 15px;
+    color: #FF1618;
+
 }
 
 @media screen and (max-width: 424px) {
@@ -2343,7 +2345,8 @@ input:-webkit-autofill {
 	position: absolute;
 	top: 50%;
 	right: 0;
-	background: linear-gradient(-45deg, hsl(var(--primary)), hsl(var(--info)) 100%);
+    background: linear-gradient(303.94deg, #FF1618 0%, #FD5949 100%);
+	/* background: linear-gradient(-45deg, hsl(var(--primary)), hsl(var(--info)) 100%); */
 }
 
 @media (max-width: 991px) {

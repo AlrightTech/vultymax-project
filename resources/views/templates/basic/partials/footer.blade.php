@@ -38,6 +38,9 @@ $footer = getContent('footer.content', true);
                         <li>
                             <a href="{{ route('contact') }}" class="{{ menuActive('contact') }}">@lang('Contact')</a>
                         </li>
+                        <li>
+                            <a href="{{ route('contact') }}" class="{{ menuActive('contact') }}">@lang('FAQ')</a>
+                        </li>
                     </ul>
                 </div>
             </div>
