@@ -3,9 +3,14 @@ $featureContent = getContent('feature.content', true);
 $featureElement = getContent('feature.element', false, null, true);
 @endphp
 <section class="why-choose pt-80 pb-80 bg--light position-relative">
+    <h2 class="section-header__title w-100 text-center">
+        {{ __(@$featureContent->data_values->heading) }}
+    </h2>
     <div class="container">
-        
+
+
         <div class="row gy-sm-5 gy-4 justify-content-center align-items-center">
+
             <div class="col-xl-4 col-md-6 col-sm-10">
                 @foreach ($featureElement as $feature)
                     @if ($loop->odd)
