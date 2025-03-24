@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AIController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+Route::post('/generate_sponsee_ai', [AIController::class, 'index']);
+Route::post('/generateService', [AIController::class, 'generateService']);
 
 Route::namespace('Api')->name('api.')->group(function(){
 
