@@ -24,7 +24,8 @@ use App\Models\Tag;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cookie;
-
+use GuzzleHttp\Client;
+use GuzzleHttp\Psr7\Request as GuzzleRequest;
 
 
 
@@ -370,6 +371,11 @@ class SiteController extends Controller
 
     protected function getInfluencer($request)
     {
+        
+        
+        
+        
+        
         $influencers = Influencer::active();
 
         if ($request->categories) {
@@ -397,9 +403,68 @@ class SiteController extends Controller
         if ($request->completedJob) {
             $influencers = $influencers->where('completed_order', '>', $request->completedJob)->orderBy('completed_order', 'desc');
         }
+       // Check if there's a search term
+    if (!empty($request->search)) {
+        // Fetch influencers based on search term
+        $response = $this->fetchInfluencers();
+        $data = $response->getData(true); // true gives associative array
 
+        // Decode the response from JSON
+        $decodedResponse = json_decode($data['response'], true);
+
+        // Extract the 'id' and 'score' values
+        $ids = array_column($decodedResponse, 'id');
+        $scores = array_column($decodedResponse, 'score', 'id'); // Using 'id' as key for quick lookup
+
+        // If there are ids, apply the filter using whereIn
+        if (!empty($ids)) {
+            $influencers->whereIn('id', $ids);
+        }
+    }
+    
+
+        $result= $influencers->with('socialLink')->paginate(getPaginate(18));
+        if (isset($scores)) {
+        $result->getCollection()->transform(function ($influencer) use ($scores) {
+            $influencer->score = isset($scores[$influencer->id]) ? $scores[$influencer->id] : null;
+            return $influencer;
+        });
+    }
+        
+        return $result;
+        
         return $influencers->searchable(['firstname', 'lastname', 'username', 'profession'])->with('socialLink')->orderBy('completed_order', 'desc')->paginate(getPaginate(18));
     }
+    
+    
+    
+     public function fetchInfluencers()
+    {
+        $client = new Client();
+        $body = json_encode([
+            "query" => request()->search
+           // "query" => "all influencers "
+        ]);
+
+        $headers = [
+            'Content-Type' => 'application/json',
+        ];
+
+        $request = new GuzzleRequest('POST', 'http://104.131.59.251/askdb', $headers, $body);
+
+        try {
+            $response = $client->sendAsync($request)->wait();
+            $json = $response->getBody()->getContents();
+
+            return response()->json(json_decode($json, true)); // returns as proper Laravel JSON response
+        } catch (RequestException $e) {
+            return response()->json([
+                'error' => 'Request failed',
+                'message' => $e->getMessage(),
+            ], 500);
+        }
+    }
+    
 
     public function attachmentDownload($attachment, $conversation_id, $type)
     {

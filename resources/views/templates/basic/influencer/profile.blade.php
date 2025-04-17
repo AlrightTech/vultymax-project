@@ -53,19 +53,19 @@
                 <ul class="info d-flex justify-content-between border-top mt-4 flex-wrap gap-3 pt-4">
                     <li class="d-flex align-items-center gap-2">
                         <h4 class="text--warning d-inline-block">{{ $data['pending_job'] }}</h4>
-                        <span>@lang('Pending Job')</span>
+                        <span>@lang('Pending sponsorships')</span>
                     </li>
                     <li class="d-flex align-items-center gap-2">
                         <h4 class="text--base d-inline-block">{{ $data['ongoing_job'] }}</h4>
-                        <span>@lang('Ongoing Job')</span>
+                        <span>@lang('Ongoing sponsorships')</span>
                     </li>
                     <li class="d-flex align-items-center gap-2">
                         <h4 class="text--info d-inline-block">{{ $data['queue_job'] }}</h4>
-                        <span>@lang('Queue Job')</span>
+                        <span>@lang('Queue sponsorships')</span>
                     </li>
                     <li class="d-flex align-items-center gap-2">
                         <h4 class="text--success d-inline-block">{{ $data['completed_job'] }}</h4>
-                        <span>@lang('Completed Job')</span>
+                        <span>@lang('Completed sponsorships')</span>
                     </li>
                 </ul>
             </div>

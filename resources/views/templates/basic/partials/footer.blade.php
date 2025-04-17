@@ -63,8 +63,12 @@ $footer = getContent('footer.content', true);
                     <h5 class="footer-widget__title text--base mb-sm-3 mb-2 pb-1">@lang('Contacts Info')</h5>
                     <ul class="footer-links">
                         <li><a href="mailto:{{ @$contact->data_values->email_address }}"><i class="las la-envelope-open"></i> {{ __(@$contact->data_values->email_address) }}</a></li>
+                        @if($contact->data_values->contact_number_one)
                         <li><a href="tel:{{ @$contact->data_values->contact_number_one }}"><i class="las la-phone-volume"></i> {{ @$contact->data_values->contact_number_one }}</a></li>
+                        @endif
+                        @if($contact->data_values->contact_number_two)
                         <li><a href="tel:{{ @$contact->data_values->contact_number_two }}"><i class="las la-phone-volume"></i> {{ @$contact->data_values->contact_number_two }}</a></li>
+                        @endif
                     </ul>
                 </div>
             </div>
